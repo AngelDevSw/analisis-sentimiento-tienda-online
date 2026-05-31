@@ -1,0 +1,91 @@
+﻿texto,etiqueta_real,etiqueta_predicha,modelo
+el producto se ve bien pero al usarlo noto que no es tan resistente,mixto,mixto,LogisticRegression
+me gusto aunque no era exactamente lo que esperaba por el precio pagado,mixto,mixto,LogisticRegression
+muy buen articulo lo use de inmediato y funciona perfecto,positivo,positivo,LogisticRegression
+el envio fue un desastre y el producto llego en malas condiciones,negativo,neutro,LogisticRegression
+buen precio y buena calidad aunque la entrega tuvo un retraso,mixto,mixto,LogisticRegression
+buen articulo aunque el embalaje podria proteger mejor el producto,mixto,mixto,LogisticRegression
+el envio tardo el doble de lo prometido muy molesto,negativo,positivo,LogisticRegression
+el envio fue puntual el articulo llego en buen estado,neutro,neutro,LogisticRegression
+es un buen producto aunque llego con el empaque deteriorado,mixto,mixto,LogisticRegression
+muy decepcionante la calidad es pesima para el precio que tiene,negativo,mixto,LogisticRegression
+la pantalla se rayo sola en el primer dia,negativo,negativo,LogisticRegression
+la calidad es una decepcion total no vale la pena,negativo,negativo,LogisticRegression
+el articulo llego antes de lo esperado y en buen estado,positivo,neutro,LogisticRegression
+producto de alta calidad llego perfectamente empacado,positivo,positivo,LogisticRegression
+excelente articulo facil de usar y muy duradero,positivo,positivo,LogisticRegression
+el vendedor es atento aunque el producto tiene algunas imperfecciones,mixto,mixto,LogisticRegression
+muy mala experiencia no volveria a comprar en esta tienda,negativo,negativo,LogisticRegression
+se rompio a los dos dias de uso calidad deplorable,negativo,negativo,LogisticRegression
+me gusto mucho el diseno pero tuve problemas al instalarlo,mixto,mixto,LogisticRegression
+el producto es normal cumple lo basico,neutro,neutro,LogisticRegression
+el articulo llego sin garantia y con fallas evidentes,negativo,negativo,LogisticRegression
+funciona a la perfeccion justo lo que necesitaba,positivo,positivo,LogisticRegression
+buen precio aunque la calidad del cable incluido es bastante deficiente,mixto,mixto,LogisticRegression
+el articulo es normal cumple su funcion sin sorprender,neutro,neutro,LogisticRegression
+articulo recibido todo en orden,neutro,neutro,LogisticRegression
+me llego en tiempo y forma sin ningun problema,positivo,neutro,LogisticRegression
+el producto es correcto el envio fue a tiempo,neutro,neutro,LogisticRegression
+llego bien es lo que se esperaba por ese precio,neutro,neutro,LogisticRegression
+buena compra en general aunque el empaque interno era muy basico,mixto,mixto,LogisticRegression
+el articulo es funcional pero llego con la caja abierta,mixto,mixto,LogisticRegression
+me cobraron dos veces y el vendedor se niega a reembolsar,negativo,mixto,LogisticRegression
+el producto es funcional pero le falta acabado en algunos detalles,mixto,mixto,LogisticRegression
+producto genial mis hijos quedaron felices,positivo,positivo,LogisticRegression
+compre dos unidades y ambas llegaron defectuosas terrible,negativo,negativo,LogisticRegression
+todo llego como se esperaba sin comentarios adicionales,neutro,neutro,LogisticRegression
+todo llego en orden el articulo es funcional,neutro,neutro,LogisticRegression
+llego bien y funciona sin nada que resaltar,neutro,neutro,LogisticRegression
+recibi el articulo a tiempo y en buen estado todo en orden,neutro,neutro,LogisticRegression
+el vendedor ignoro mis reclamaciones pesimo servicio,negativo,negativo,LogisticRegression
+muy decepcionado con la compra nunca mas comprare aqui,negativo,positivo,LogisticRegression
+el articulo llego en buenas condiciones todo normal,neutro,neutro,LogisticRegression
+todo excelente desde la compra hasta la entrega,positivo,positivo,LogisticRegression
+el articulo es correcto llego como se esperaba,neutro,neutro,LogisticRegression
+producto de calidad y precio accesible lo recomiendo,positivo,positivo,LogisticRegression
+llego tarde y en malas condiciones muy frustrado,negativo,positivo,LogisticRegression
+el producto cumple su proposito nada mas,neutro,neutro,LogisticRegression
+producto llego roto muy decepcionado con la compra,negativo,positivo,LogisticRegression
+el articulo tiene buena calidad aunque uno de los accesorios vino defectuoso,mixto,mixto,LogisticRegression
+el producto es bueno pero el envio tardo mas de lo prometido,mixto,mixto,LogisticRegression
+es un articulo correcto sin defectos pero tampoco sin destacar,neutro,neutro,LogisticRegression
+excelente experiencia el producto supero mis expectativas,positivo,positivo,LogisticRegression
+pesimo vendedor no hace seguimiento del envio,negativo,negativo,LogisticRegression
+funciona bien en general pero la bateria no dura tanto como decian,mixto,mixto,LogisticRegression
+el embalaje era tan malo que el articulo estaba completamente aplastado,negativo,negativo,LogisticRegression
+muy buen articulo precio justo y envio rapido,positivo,positivo,LogisticRegression
+el producto cumple su funcion pero le falta durabilidad,mixto,mixto,LogisticRegression
+producto recibido en buen estado el envio fue estandar,neutro,neutro,LogisticRegression
+el producto cumple su funcion el envio fue estandar,neutro,neutro,LogisticRegression
+producto inutil no cumple ninguna de sus funciones,negativo,negativo,LogisticRegression
+todo perfecto desde el embalaje hasta el funcionamiento,positivo,positivo,LogisticRegression
+el producto es tal cual lo describe el vendedor muy bueno,positivo,positivo,LogisticRegression
+muy buen producto y excelente atencion al cliente,positivo,positivo,LogisticRegression
+buena calidad aunque el empaque llego un poco golpeado,mixto,mixto,LogisticRegression
+recibi el articulo en el plazo indicado todo correcto,neutro,neutro,LogisticRegression
+muy buena calidad y precio justo lo recomiendo,positivo,positivo,LogisticRegression
+muy satisfecho con mi compra todo llego en orden,positivo,positivo,LogisticRegression
+el producto cumple aunque las instrucciones de uso son escasas,mixto,mixto,LogisticRegression
+pesima experiencia de compra no lo recomiendo,negativo,negativo,LogisticRegression
+excelente vendedor envio rapido y producto de calidad,positivo,positivo,LogisticRegression
+el articulo es como se describe aunque el vendedor no fue muy comunicativo,mixto,mixto,LogisticRegression
+el producto es funcional no mas no menos,neutro,negativo,LogisticRegression
+la calidad es buena aunque el servicio de entrega dejo mucho que desear,mixto,mixto,LogisticRegression
+la descripcion es completamente enganosa no es lo que parece,negativo,negativo,LogisticRegression
+el articulo llego bien el producto es lo esperado,neutro,neutro,LogisticRegression
+el pedido fue puntual aunque el producto tiene menos funciones de las esperadas,mixto,mixto,LogisticRegression
+recomendado al 100 producto de calidad garantizada,positivo,positivo,LogisticRegression
+excelente producto llego antes de lo esperado y en perfectas condiciones,positivo,positivo,LogisticRegression
+el producto llego como se esperaba sin contratiempos,neutro,neutro,LogisticRegression
+llego en el tiempo prometido y sin problemas adicionales,neutro,neutro,LogisticRegression
+muy mala experiencia el vendedor no respondio mis mensajes,negativo,negativo,LogisticRegression
+el producto llego rapido y esta en perfectas condiciones,positivo,positivo,LogisticRegression
+me gusto el articulo pero el proceso de devolucion fue complicado,mixto,mixto,LogisticRegression
+todo en orden el articulo cumple todas mis expectativas,positivo,neutro,LogisticRegression
+buen producto por el precio aunque el acabado podria ser mejor,mixto,mixto,LogisticRegression
+llego con la caja destruida y el producto rayado,negativo,negativo,LogisticRegression
+muy mala calidad el material es plastico barato,negativo,negativo,LogisticRegression
+excelente compra lo mejor que he adquirido en linea,positivo,positivo,LogisticRegression
+el producto es normal funciona como cualquier articulo de esta categoria,neutro,neutro,LogisticRegression
+articulo recibido correctamente el vendedor cumplio con los tiempos,neutro,neutro,LogisticRegression
+envio puntual aunque el producto presenta pequenas fallas de fabrica,mixto,mixto,LogisticRegression
