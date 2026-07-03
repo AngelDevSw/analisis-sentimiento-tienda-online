@@ -1,3 +1,5 @@
 ﻿modelo,accuracy,precision_macro,recall_macro,f1_macro
-MultinomialNB,0.844444,0.869278,0.842391,0.840741
-LogisticRegression,0.877778,0.882435,0.875494,0.872553
+RandomForest,0.683333,0.691809,0.683333,0.67928
+LinearSVC,0.672222,0.679299,0.672222,0.67268
+LogisticRegression,0.672222,0.678096,0.672222,0.669816
+MultinomialNB,0.666667,0.688174,0.666667,0.662517

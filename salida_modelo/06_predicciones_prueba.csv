@@ -1,91 +1,181 @@
-﻿texto,etiqueta_real,etiqueta_predicha,modelo
-el producto se ve bien pero al usarlo noto que no es tan resistente,mixto,mixto,LogisticRegression
-me gusto aunque no era exactamente lo que esperaba por el precio pagado,mixto,mixto,LogisticRegression
-muy buen articulo lo use de inmediato y funciona perfecto,positivo,positivo,LogisticRegression
-el envio fue un desastre y el producto llego en malas condiciones,negativo,neutro,LogisticRegression
-buen precio y buena calidad aunque la entrega tuvo un retraso,mixto,mixto,LogisticRegression
-buen articulo aunque el embalaje podria proteger mejor el producto,mixto,mixto,LogisticRegression
-el envio tardo el doble de lo prometido muy molesto,negativo,positivo,LogisticRegression
-el envio fue puntual el articulo llego en buen estado,neutro,neutro,LogisticRegression
-es un buen producto aunque llego con el empaque deteriorado,mixto,mixto,LogisticRegression
-muy decepcionante la calidad es pesima para el precio que tiene,negativo,mixto,LogisticRegression
-la pantalla se rayo sola en el primer dia,negativo,negativo,LogisticRegression
-la calidad es una decepcion total no vale la pena,negativo,negativo,LogisticRegression
-el articulo llego antes de lo esperado y en buen estado,positivo,neutro,LogisticRegression
-producto de alta calidad llego perfectamente empacado,positivo,positivo,LogisticRegression
-excelente articulo facil de usar y muy duradero,positivo,positivo,LogisticRegression
-el vendedor es atento aunque el producto tiene algunas imperfecciones,mixto,mixto,LogisticRegression
-muy mala experiencia no volveria a comprar en esta tienda,negativo,negativo,LogisticRegression
-se rompio a los dos dias de uso calidad deplorable,negativo,negativo,LogisticRegression
-me gusto mucho el diseno pero tuve problemas al instalarlo,mixto,mixto,LogisticRegression
-el producto es normal cumple lo basico,neutro,neutro,LogisticRegression
-el articulo llego sin garantia y con fallas evidentes,negativo,negativo,LogisticRegression
-funciona a la perfeccion justo lo que necesitaba,positivo,positivo,LogisticRegression
-buen precio aunque la calidad del cable incluido es bastante deficiente,mixto,mixto,LogisticRegression
-el articulo es normal cumple su funcion sin sorprender,neutro,neutro,LogisticRegression
-articulo recibido todo en orden,neutro,neutro,LogisticRegression
-me llego en tiempo y forma sin ningun problema,positivo,neutro,LogisticRegression
-el producto es correcto el envio fue a tiempo,neutro,neutro,LogisticRegression
-llego bien es lo que se esperaba por ese precio,neutro,neutro,LogisticRegression
-buena compra en general aunque el empaque interno era muy basico,mixto,mixto,LogisticRegression
-el articulo es funcional pero llego con la caja abierta,mixto,mixto,LogisticRegression
-me cobraron dos veces y el vendedor se niega a reembolsar,negativo,mixto,LogisticRegression
-el producto es funcional pero le falta acabado en algunos detalles,mixto,mixto,LogisticRegression
-producto genial mis hijos quedaron felices,positivo,positivo,LogisticRegression
-compre dos unidades y ambas llegaron defectuosas terrible,negativo,negativo,LogisticRegression
-todo llego como se esperaba sin comentarios adicionales,neutro,neutro,LogisticRegression
-todo llego en orden el articulo es funcional,neutro,neutro,LogisticRegression
-llego bien y funciona sin nada que resaltar,neutro,neutro,LogisticRegression
-recibi el articulo a tiempo y en buen estado todo en orden,neutro,neutro,LogisticRegression
-el vendedor ignoro mis reclamaciones pesimo servicio,negativo,negativo,LogisticRegression
-muy decepcionado con la compra nunca mas comprare aqui,negativo,positivo,LogisticRegression
-el articulo llego en buenas condiciones todo normal,neutro,neutro,LogisticRegression
-todo excelente desde la compra hasta la entrega,positivo,positivo,LogisticRegression
-el articulo es correcto llego como se esperaba,neutro,neutro,LogisticRegression
-producto de calidad y precio accesible lo recomiendo,positivo,positivo,LogisticRegression
-llego tarde y en malas condiciones muy frustrado,negativo,positivo,LogisticRegression
-el producto cumple su proposito nada mas,neutro,neutro,LogisticRegression
-producto llego roto muy decepcionado con la compra,negativo,positivo,LogisticRegression
-el articulo tiene buena calidad aunque uno de los accesorios vino defectuoso,mixto,mixto,LogisticRegression
-el producto es bueno pero el envio tardo mas de lo prometido,mixto,mixto,LogisticRegression
-es un articulo correcto sin defectos pero tampoco sin destacar,neutro,neutro,LogisticRegression
-excelente experiencia el producto supero mis expectativas,positivo,positivo,LogisticRegression
-pesimo vendedor no hace seguimiento del envio,negativo,negativo,LogisticRegression
-funciona bien en general pero la bateria no dura tanto como decian,mixto,mixto,LogisticRegression
-el embalaje era tan malo que el articulo estaba completamente aplastado,negativo,negativo,LogisticRegression
-muy buen articulo precio justo y envio rapido,positivo,positivo,LogisticRegression
-el producto cumple su funcion pero le falta durabilidad,mixto,mixto,LogisticRegression
-producto recibido en buen estado el envio fue estandar,neutro,neutro,LogisticRegression
-el producto cumple su funcion el envio fue estandar,neutro,neutro,LogisticRegression
-producto inutil no cumple ninguna de sus funciones,negativo,negativo,LogisticRegression
-todo perfecto desde el embalaje hasta el funcionamiento,positivo,positivo,LogisticRegression
-el producto es tal cual lo describe el vendedor muy bueno,positivo,positivo,LogisticRegression
-muy buen producto y excelente atencion al cliente,positivo,positivo,LogisticRegression
-buena calidad aunque el empaque llego un poco golpeado,mixto,mixto,LogisticRegression
-recibi el articulo en el plazo indicado todo correcto,neutro,neutro,LogisticRegression
-muy buena calidad y precio justo lo recomiendo,positivo,positivo,LogisticRegression
-muy satisfecho con mi compra todo llego en orden,positivo,positivo,LogisticRegression
-el producto cumple aunque las instrucciones de uso son escasas,mixto,mixto,LogisticRegression
-pesima experiencia de compra no lo recomiendo,negativo,negativo,LogisticRegression
-excelente vendedor envio rapido y producto de calidad,positivo,positivo,LogisticRegression
-el articulo es como se describe aunque el vendedor no fue muy comunicativo,mixto,mixto,LogisticRegression
-el producto es funcional no mas no menos,neutro,negativo,LogisticRegression
-la calidad es buena aunque el servicio de entrega dejo mucho que desear,mixto,mixto,LogisticRegression
-la descripcion es completamente enganosa no es lo que parece,negativo,negativo,LogisticRegression
-el articulo llego bien el producto es lo esperado,neutro,neutro,LogisticRegression
-el pedido fue puntual aunque el producto tiene menos funciones de las esperadas,mixto,mixto,LogisticRegression
-recomendado al 100 producto de calidad garantizada,positivo,positivo,LogisticRegression
-excelente producto llego antes de lo esperado y en perfectas condiciones,positivo,positivo,LogisticRegression
-el producto llego como se esperaba sin contratiempos,neutro,neutro,LogisticRegression
-llego en el tiempo prometido y sin problemas adicionales,neutro,neutro,LogisticRegression
-muy mala experiencia el vendedor no respondio mis mensajes,negativo,negativo,LogisticRegression
-el producto llego rapido y esta en perfectas condiciones,positivo,positivo,LogisticRegression
-me gusto el articulo pero el proceso de devolucion fue complicado,mixto,mixto,LogisticRegression
-todo en orden el articulo cumple todas mis expectativas,positivo,neutro,LogisticRegression
-buen producto por el precio aunque el acabado podria ser mejor,mixto,mixto,LogisticRegression
-llego con la caja destruida y el producto rayado,negativo,negativo,LogisticRegression
-muy mala calidad el material es plastico barato,negativo,negativo,LogisticRegression
-excelente compra lo mejor que he adquirido en linea,positivo,positivo,LogisticRegression
-el producto es normal funciona como cualquier articulo de esta categoria,neutro,neutro,LogisticRegression
-articulo recibido correctamente el vendedor cumplio con los tiempos,neutro,neutro,LogisticRegression
-envio puntual aunque el producto presenta pequenas fallas de fabrica,mixto,mixto,LogisticRegression
+﻿"id","texto_original","texto_procesado","etiqueta_real","etiqueta_predicha","modelo"
+"50","El artículo está bonito y se nota que es durable.","artículo bonito notar durable","positivo","mixto","RandomForest"
+"234","Muy mala experiencia, el pedido llegó equivocado.","malo experiencia pedido equivocado","negativo","negativo","RandomForest"
+"431","El shampoo tiene presentación estándar.","shampoo presentación estándar","neutro","neutro","RandomForest"
+"100","Me agradó que el paquete llegara cerrado y con buena protección; además, el artículo era exactamente como aparecía en la publicación.","agradar paquete llegar cerrado protección artículo exactamente aparecer publicación","positivo","negativo","RandomForest"
+"222","El producto venía rayado, parecía usado.","producto venir rayado parecer usado","negativo","negativo","RandomForest"
+"453","Me gustó, pero no tanto.","gustar","mixto","negativo","RandomForest"
+"361","La compra fue completada y el producto fue entregado.","compra completar producto entregar","neutro","neutro","RandomForest"
+"225","No carga bien, se desconecta a cada rato.","carga desconectar rato","negativo","neutro","RandomForest"
+"364","La prenda corresponde al color seleccionado.","prenda corresponder color seleccionado","neutro","neutro","RandomForest"
+"279","El tabla para picar venía abierto y con señales de uso.","tabla picar venir abierto señal","negativo","negativo","RandomForest"
+"282","El olla tardó mucho en llegar y llegó maltratado.","olla tardar llegar maltratado","negativo","negativo","RandomForest"
+"553","El rasuradora funciona, pero la batería dura poco.","rasuradora funcionar batería duro","mixto","mixto","RandomForest"
+"174","No es igual al de la foto, me sentí engañado.","foto sentir engañar","negativo","mixto","RandomForest"
+"24","Muy buen artículo, el precio está justo y la entrega fue rápida.","artículo precio justo entrega rápido","positivo","neutro","RandomForest"
+"551","pues Me gustó el precio del blusa, pero el material no tanto. :(","gustar precio blusa material","mixto","mixto","RandomForest"
+"85","El set de cocina llegó completo y muy bien empacado.","set cocina completo empacado","positivo","positivo","RandomForest"
+"409","El reloj inteligente llegó completo y sin observaciones.","reloj inteligente completo observación","neutro","neutro","RandomForest"
+"452","Funciona, pero llegó golpeado.","funcionar golpeado","mixto","mixto","RandomForest"
+"542","Me gustó el precio, pero el material no se siente premium.","gustar precio material premium","mixto","mixto","RandomForest"
+"242","El color se despintó después del primer lavado.","color despintar lavado","negativo","mixto","RandomForest"
+"39","Me gustó que el paquete venía bien protegido.","gustar paquete venir protegido","positivo","negativo","RandomForest"
+"229","No me sirvió, las medidas publicadas están mal.","servir medida publicado","negativo","neutro","RandomForest"
+"541","El producto funciona, aunque la batería baja más rápido de lo anunciado.","producto funcionar batería rápido anunciado","mixto","positivo","RandomForest"
+"236","La crema llegó caducada, eso no debería pasar.","crema caducado deber pasar","negativo","mixto","RandomForest"
+"369","Recibí el pedido completo y sin cambios.","recibir pedido completo cambio","neutro","neutro","RandomForest"
+"113","La compra del tenis fue sencilla y llegó sin problemas.","compra tenis sencillo problema","positivo","positivo","RandomForest"
+"304","Cumple.","cumplir","neutro","mixto","RandomForest"
+"212","El reloj llegó sin funcionar y con la pantalla rayada.","reloj funcionar pantalla rayado","negativo","mixto","RandomForest"
+"501","El envío fue rápido, pero el producto tenía un pequeño rayón.","envío rápido producto pequeño rayón","mixto","mixto","RandomForest"
+"119","El drone infantil está mejor de lo que esperaba.","drone infantil esperar","positivo","positivo","RandomForest"
+"399","El artículo tiene un funcionamiento básico, suficiente para el uso indicado en la publicación, sin elementos destacables.","artículo funcionamiento básico suficiente indicado publicación elemento destacable","neutro","neutro","RandomForest"
+"4","10/10.","","positivo","neutro","RandomForest"
+"266","mmm Pésima compra, el cargador falló rápido. jeje","mmm pésimo comprar cargador fallar rápido jeje","negativo","negativo","RandomForest"
+"227","La calidad no justifica el precio, está muy malo.","calidad justificar precio malo","negativo","negativo","RandomForest"
+"322","El artículo es funcional y cumple con lo básico.","artículo funcional cumplir básico","neutro","neutro","RandomForest"
+"428","El zapatos es igual al publicado.","zapato publicado","neutro","neutro","RandomForest"
+"216","La licuadora hace mucho ruido y huele a quemado.","licuadora ruido oler quemado","negativo","neutro","RandomForest"
+"346","El envío se realizó conforme al tiempo señalado.","envío conforme tiempo señalado","neutro","neutro","RandomForest"
+"488","El artículo funciona, aunque el manual es confuso.","artículo funcionar manual confuso","mixto","neutro","RandomForest"
+"427","El licuadora llegó en condiciones normales.","licuadora condición normal","neutro","neutro","RandomForest"
+"558","la verdad El zapatos funciona, pero la batería dura poco.","zapato funcionar batería duro","mixto","mixto","RandomForest"
+"324","El producto es normal, no destaca pero funciona.","producto normal destacar funcionar","neutro","neutro","RandomForest"
+"84","La chamarra está cómoda y se ve de buena calidad.","chamarra cómodo calidad","positivo","positivo","RandomForest"
+"209","No me gustó nada, la calidad es deficiente.","gustar calidad deficiente","negativo","positivo","RandomForest"
+"327","La compra se realizó sin inconvenientes.","compra inconveniente","neutro","positivo","RandomForest"
+"277","Pésima compra, el juguete falló rápido.","pésimo comprar juguete fallar rápido","negativo","negativo","RandomForest"
+"253","Muy mala calidad del mouse, no lo recomiendo.","malo calidad mouse recomeir","negativo","negativo","RandomForest"
+"472","Me gustó el diseño, aunque la calidad del material pudo ser mejor.","gustar diseño calidad material","mixto","positivo","RandomForest"
+"543","El envío fue correcto, aunque el producto llegó con una marca pequeña.","envío correcto producto marca pequeño","mixto","mixto","RandomForest"
+"349","La compra quedó registrada correctamente en la app.","compra registrado correctamente app","neutro","neutro","RandomForest"
+"492","La camiseta tiene buen diseño, pero la tela es delgada.","camiseta diseño tela delgar","mixto","positivo","RandomForest"
+"317","pedido recibido","pedido recibido","neutro","neutro","RandomForest"
+"550","La calidad es aceptable para el precio y funciona bien, aunque después de usarlo noté que algunos acabados podrían mejorar.","calidad aceptable precio funcionar noté acabado mejorar","mixto","mixto","RandomForest"
+"415","El mouse cumple con lo básico.","mouse cumplir básico","neutro","neutro","RandomForest"
+"509","El vendedor fue amable, pero el envío se demoró varios días.","vendedor amable envío demorar","mixto","negativo","RandomForest"
+"577","El gorra es útil, aunque venía incompleto.","gorra útil venir incompleto","mixto","mixto","RandomForest"
+"563","El jabón sirve, pero no es igual a la foto.","jabón servir foto","mixto","mixto","RandomForest"
+"308","Llegó.","","neutro","neutro","RandomForest"
+"163","no funsiona","funsionar","negativo","neutro","RandomForest"
+"12","funciona bn","funcionar","positivo","neutro","RandomForest"
+"508","El artículo sirve, aunque no trae todos los accesorios esperados.","artículo servir traer accesorio esperado","mixto","neutro","RandomForest"
+"392","La presentación del producto es convencional.","presentación producto convencional","neutro","positivo","RandomForest"
+"258","El licuadora se rompió al poco tiempo de usarlo.","licuadora romper tiempo","negativo","negativo","RandomForest"
+"567","Me gustó el precio del crema, pero el material no tanto.","gustar precio crema material","mixto","mixto","RandomForest"
+"186","No cumple con la descripción, nada que ver con lo anunciado.","cumplir descripción anunciado","negativo","neutro","RandomForest"
+"446","La compra del molde se realizó sin cambios.","compra molde cambio","neutro","neutro","RandomForest"
+"294","pues Muy mala calidad del perfume, no lo recomiendo. la neta","malo calidad perfume recomeir neta","negativo","negativo","RandomForest"
+"256","Muy mala calidad del cable USB, no lo recomiendo. en fin","malo calidad cable usb recomeir","negativo","negativo","RandomForest"
+"405","El teclado llegó en condiciones normales.","teclado condición normal","neutro","neutro","RandomForest"
+"96","La compra fue mejor de lo que esperaba porque el producto venía bien protegido, llegó antes de la fecha marcada y desde el primer uso funcionó correctamente.","compra esperar producto venir protegido fecha marcado funcionar correctamente","positivo","mixto","RandomForest"
+"330","El artículo recibido coincide con la orden de compra.","artículo recibido coincidir orden compra","neutro","neutro","RandomForest"
+"411","El chamarra cumple con lo básico.","chamarra cumplir básico","neutro","neutro","RandomForest"
+"67","La presentación del producto es muy buena.","presentación producto","positivo","positivo","RandomForest"
+"319","uso normal","normal","neutro","neutro","RandomForest"
+"187","Me llegó un producto diferente al que compré.","producto comprar","negativo","neutro","RandomForest"
+"284","sinceramente El cargador venía abierto y con señales de uso.","sinceramente cargador venir abierto señal","negativo","negativo","RandomForest"
+"10","Me gusto mucho.","gustar","positivo","negativo","RandomForest"
+"178","El producto venía abierto y con señales de uso.","producto venir abierto señal","negativo","negativo","RandomForest"
+"159","Nada que ver.","","negativo","neutro","RandomForest"
+"247","El paquete venía abierto, el producto tenía marcas de uso y al intentar reportarlo no recibí una respuesta clara del vendedor.","paquete venir abierto producto marca intentar recibir respuesta vendedor","negativo","negativo","RandomForest"
+"435","la verdad El gorra tiene presentación estándar.","gorra presentación estándar","neutro","neutro","RandomForest"
+"539","El artículo llegó bien, pero la calidad del accesorio extra es baja.","artículo calidad accesorio extra","mixto","neutro","RandomForest"
+"328","El producto cumple su función de manera estándar.","producto cumplir función estándar","neutro","neutro","RandomForest"
+"457","Bonito pero chico.","bonito chico","mixto","mixto","RandomForest"
+"448","El drone infantil puede usarse para lo indicado.","drone infantil indicado","neutro","neutro","RandomForest"
+"34","El juguete llegó completo y a mi sobrino le encantó.","juguete completo sobrino encantar","positivo","positivo","RandomForest"
+"128","Excelente sudadera, llegó bien empacado y listo para usar.","excelente sudadera empacado listo","positivo","positivo","RandomForest"
+"522","La mochila está bonita, pero una costura viene chueca.","mochilo bonito costura venir chueco","mixto","mixto","RandomForest"
+"69","La entrega fue muy rápida y el producto excelente.","entrega rápido producto excelente","positivo","positivo","RandomForest"
+"289","sinceramente Muy mala calidad del juego de mesa, no lo recomiendo. en fin","sinceramente malo calidad juego mesa recomeir","negativo","negativo","RandomForest"
+"591","El pantalón cumple, aunque esperaba mejor calidad.","pantalón cumplir esperar calidad","mixto","mixto","RandomForest"
+"286","Pésima compra, el sudadera falló rápido.","pésimo comprar sudadera fallar rápido","negativo","negativo","RandomForest"
+"566","El chamarra funciona bien, pero llegó golpeado.","chamarra funcionar golpeado","mixto","mixto","RandomForest"
+"503","El juguete está bonito, aunque una parte se desprende fácil.","juguete bonito desprender fácil","mixto","mixto","RandomForest"
+"337","La talla corresponde a la guía publicada.","talla corresponder guía publicado","neutro","neutro","RandomForest"
+"51","Me gustó mucho, sin duda volvería a comprar.","gustar duda volver comprar","positivo","negativo","RandomForest"
+"525","La compra fue buena, aunque la atención tardó en contestar.","compra atención tardar contestar","mixto","neutro","RandomForest"
+"65","La talla coincidió perfectamente con la guía.","talla coincidir perfectamente guía","positivo","negativo","RandomForest"
+"16","me yego en buen estado","yeguir","positivo","neutro","RandomForest"
+"344","El producto tiene un diseño común y funcional.","producto diseño común funcional","neutro","positivo","RandomForest"
+"321","El producto llegó en la fecha indicada y corresponde a la descripción.","producto fecha indicado corresponder descripción","neutro","neutro","RandomForest"
+"450","ok, El mouse llegó completo y sin observaciones. pero bueno","mouse completo observación","neutro","neutro","RandomForest"
+"220","El material se rompió con un uso normal.","material romper normal","negativo","neutro","RandomForest"
+"118","La compra del plancha de cabello fue sencilla y llegó sin problemas.","compra plancha cabello sencillo problema","positivo","positivo","RandomForest"
+"33","El cargador carga rápido y no se calienta, excelente.","cargador carga rápido calentar excelente","positivo","positivo","RandomForest"
+"86","La crema funciona bien y llegó en buen estado.","crema funcionar","positivo","mixto","RandomForest"
+"195","El producto no prende, llegó defectuoso.","producto prender defectuoso","negativo","negativo","RandomForest"
+"153","Pésimo.","pésimo","negativo","negativo","RandomForest"
+"351","El artículo funciona de acuerdo con su categoría.","artículo funcionar categoría","neutro","neutro","RandomForest"
+"598","El juego de mesa funciona bien, pero llegó golpeado.","juego mesa funcionar golpeado","mixto","mixto","RandomForest"
+"348","El producto llegó sin daños visibles.","producto daño visible","neutro","neutro","RandomForest"
+"512","El pedido llegó completo, pero la caja estaba aplastada.","pedido completo caja aplastado","mixto","positivo","RandomForest"
+"447","El pelota llegó completo y sin observaciones.","pelota completo observación","neutro","neutro","RandomForest"
+"246","La experiencia fue mala desde el inicio: la app marcó error al pagar, después el pedido apareció como enviado y finalmente llegó un producto diferente.","experiencia malo inicio app marcar error pagar pedido aparecer enviado finalmente producto","negativo","negativo","RandomForest"
+"293","la verdad El figura llegó incompleto y nadie resolvió. :(","figura incompleto resolver","negativo","negativo","RandomForest"
+"80","Me gustó porque es fácil de usar y se ve resistente.","gustar fácil resistente","positivo","negativo","RandomForest"
+"23","Excelente compra, llegó antes de lo esperado y funciona sin fallas.","excelente compra esperado funcionar falla","positivo","positivo","RandomForest"
+"47","El producto cumple muy bien con lo que promete.","producto cumplir prometer","positivo","positivo","RandomForest"
+"505","El producto es práctico, pero la instalación fue complicada.","producto práctico instalación complicar","mixto","neutro","RandomForest"
+"43","La bocina suena fuerte y claro, superó mis expectativas.","bocina sonar fuerte superar expectativa","positivo","positivo","RandomForest"
+"136","El freidora está mejor de lo que esperaba.","freidora esperar","positivo","positivo","RandomForest"
+"115","El pantalón llegó rápido y funciona muy bien.","pantalón rápido funcionar","positivo","positivo","RandomForest"
+"590","El bocina es útil, aunque venía incompleto.","bocina útil venir incompleto","mixto","mixto","RandomForest"
+"499","El diseño me encantó, pero el material se siente frágil.","diseño encantar material frágil","mixto","positivo","RandomForest"
+"271","El power bank llegó dañado y no funciona.","power bank dañado funcionar","negativo","negativo","RandomForest"
+"580","El jabón es útil, aunque venía incompleto.","jabón útil venir incompleto","mixto","mixto","RandomForest"
+"465","sirve pero no es igual","servir","mixto","positivo","RandomForest"
+"595","ok, El drone infantil llegó rápido, pero tenía un rayón.!!!","drone infantil rápido rayón","mixto","mixto","RandomForest"
+"538","El vendedor contestó, aunque tardó bastante en solucionar la duda.","vendedor contestar tardar solucionar duda","mixto","negativo","RandomForest"
+"397","La compra se completó de forma habitual, el seguimiento mostró los cambios de estado y el artículo llegó con las características indicadas.","compra completar forma habitual seguimiento mostrar cambio artículo característica indicado","neutro","neutro","RandomForest"
+"306","Todo estándar.","estándar","neutro","neutro","RandomForest"
+"436","El power bank es igual al publicado.","power bank publicado","neutro","neutro","RandomForest"
+"194","El sartén se rayó desde el primer uso.","sartén rayar","negativo","mixto","RandomForest"
+"177","La calidad es muy baja para el precio que pagué.","calidad precio pagar","negativo","positivo","RandomForest"
+"139","la verdad El tablet superó mis expectativas, lo recomiendo. en fin","tablet superar expectativa recomeir","positivo","positivo","RandomForest"
+"29","El envío fue puntual y el producto llegó impecable.","envío puntual producto impecable","positivo","neutro","RandomForest"
+"114","Todo bien con el pantalón, llegó completo.","pantalón completo","positivo","positivo","RandomForest"
+"2","Muy bueno.","","positivo","neutro","RandomForest"
+"424","El juguete funciona de manera regular.","juguete funcionar regular","neutro","neutro","RandomForest"
+"182","El cargador se calienta demasiado, no me da confianza usarlo.","cargador calentar confianza","negativo","neutro","RandomForest"
+"32","Los audífonos se escuchan muy bien y la batería dura bastante.","audífono escuchar batería duro","positivo","mixto","RandomForest"
+"434","La compra del plancha de cabello se realizó sin cambios.","compra plancha cabello cambio","neutro","neutro","RandomForest"
+"91","El artículo es resistente y se ve muy bien.","artículo resistente","positivo","neutro","RandomForest"
+"180","La caja llegó aplastada y el producto estaba rayado.","caja aplastado producto rayado","negativo","negativo","RandomForest"
+"338","El producto se recibió en condiciones aceptables.","producto recibir condición aceptable","neutro","neutro","RandomForest"
+"514","El producto cumple su función, pero no se ve muy durable.","producto cumplir función durable","mixto","positivo","RandomForest"
+"497","La compra fue sencilla, pero el pago tardó en confirmarse.","compra sencillo pago tardar","mixto","positivo","RandomForest"
+"280","ok, El short llegó dañado y no funciona. la neta","short dañado funcionar neta","negativo","negativo","RandomForest"
+"221","El pedido llegó incompleto y nadie resolvió mi reclamo.","pedido incompleto resolver reclamo","negativo","negativo","RandomForest"
+"141","Todo bien con el tablet, llegó completo.","tablet completo","positivo","positivo","RandomForest"
+"101","Me gustó el cargador, se ve resistente y de buena calidad.","gustar cargador resistente calidad","positivo","positivo","RandomForest"
+"572","El licuadora está bonito, pero se siente frágil.","licuadora bonito frágil","mixto","mixto","RandomForest"
+"554","El pantalón es útil, aunque venía incompleto.","pantalón útil venir incompleto","mixto","mixto","RandomForest"
+"430","La compra del licuadora se realizó sin cambios.","compra licuadora cambio","neutro","neutro","RandomForest"
+"510","El producto es bonito, pero no coincide totalmente con la foto.","producto bonito coincidir totalmente foto","mixto","mixto","RandomForest"
+"144","Todo bien con el rasuradora, llegó completo.","rasuradora completo","positivo","positivo","RandomForest"
+"333","El producto funciona como se indica en la descripción.","producto funcionar indicar descripción","neutro","mixto","RandomForest"
+"291","No sirve el secadora, fue dinero perdido.","servir secadora dinero perdido","negativo","negativo","RandomForest"
+"442","El carrito tiene presentación estándar. :(","carrito presentación estándar","neutro","neutro","RandomForest"
+"94","Me gustó mucho el producto, volvería a pedirlo.","gustar producto volver","positivo","positivo","RandomForest"
+"1","Excelente.","excelente","positivo","positivo","RandomForest"
+"150","Excelente mochila, llegó bien empacado y listo para usar.","excelente mochila empacado listo","positivo","positivo","RandomForest"
+"201","El color es diferente al que pedí.","color pedir","negativo","mixto","RandomForest"
+"140","la verdad Muy buen camiseta, no tuve fallas ni detalles.","camiseta falla detalle","positivo","positivo","RandomForest"
+"92","Muy buena calidad, lo recomiendo ampliamente.","calidad recomeir ampliamente","positivo","positivo","RandomForest"
+"61","El producto es práctico y fácil de usar.","producto práctico fácil","positivo","neutro","RandomForest"
+"255","pues El blusa no coincide con la descripción. en fin","blusa coincidir descripción","negativo","negativo","RandomForest"
+"575","El olla funciona, pero la batería dura poco.","olla funcionar batería duro","mixto","mixto","RandomForest"
+"393","El producto funciona de forma normal.","producto funcionar forma normal","neutro","neutro","RandomForest"
+"147","Todo bien con el tenis, llegó completo.!!!","tenis completo","positivo","positivo","RandomForest"
+"419","El olla corresponde a la descripción.","olla corresponder descripción","neutro","neutro","RandomForest"
+"581","El chamarra llegó rápido, pero tenía un rayón.","chamarra rápido rayón","mixto","mixto","RandomForest"
+"530","La crema deja buena sensación, aunque el olor es muy fuerte.","crema dejar sensación olor fuerte","mixto","mixto","RandomForest"
+"335","El pedido llegó correctamente y sin observaciones.","pedido correctamente observación","neutro","neutro","RandomForest"
+"600","El short funciona, pero la batería dura poco.","short funcionar batería duro","mixto","mixto","RandomForest"
+"278","El chamarra venía abierto y con señales de uso.","chamarra venir abierto señal","negativo","negativo","RandomForest"
+"471","El producto funciona bien, pero llegó con la caja un poco golpeada.","producto funcionar caja golpeado","mixto","mixto","RandomForest"
+"35","La crema llegó sellada y con muy buena presentación.","crema sellado presentación","positivo","positivo","RandomForest"
+"179","No lo recomiendo, dejó de funcionar al segundo día.","recomeir funcionar","negativo","neutro","RandomForest"
+"557","Me gustó el precio del figura, pero el material no tanto. jeje","gustar precio figura material jeje","mixto","mixto","RandomForest"

@@ -1,301 +1,601 @@
 id,texto,etiqueta
-1,"Excelente producto, llegó antes de lo esperado y en perfectas condiciones.",positivo
-2,"Muy buena calidad, superó mis expectativas completamente.",positivo
-3,"Lo recomiendo ampliamente, funciona perfecto desde el primer día.",positivo
-4,Llegó bien empacado y funciona de maravilla.,positivo
-5,"Increíble producto, vale cada centavo.",positivo
-6,El envío fue rapidísimo y el producto es exactamente lo que buscaba.,positivo
-7,"Muy satisfecho con mi compra, todo llegó en orden.",positivo
-8,"Buena calidad, buen precio. Definitivamente volvería a comprar.",positivo
-9,"Funciona perfecto, mi familia quedó encantada con el producto.",positivo
-10,"Excelente vendedor, muy buena comunicación y producto de calidad.",positivo
-11,"Me llegó en tiempo y forma, sin ningún problema.",positivo
-12,La calidad es mucho mejor de lo que esperaba por ese precio.,positivo
-13,"Producto auténtico, tal como se describe. Muy contento.",positivo
-14,"Perfectamente embalado, sin daños. Funciona al 100%.",positivo
-15,"Gran compra, lo recomiendo sin dudarlo.",positivo
-16,El producto llegó rápido y está en perfectas condiciones.,positivo
-17,"Estoy muy contento, el artículo es de excelente calidad.",positivo
-18,"Superó todas mis expectativas, volveré a comprar.",positivo
-19,"Muy buen artículo, precio justo y envío rápido.",positivo
-20,"Producto de alta calidad, llegó perfectamente empacado.",positivo
-21,"Me encantó, es exactamente como en las fotos.",positivo
-22,"Excelente relación calidad-precio, muy recomendable.",positivo
-23,El artículo llegó antes de lo esperado y en buen estado.,positivo
-24,"Muy conforme con la compra, el producto es de primera.",positivo
-25,"Muy buen producto, el vendedor respondió rápido mis dudas.",positivo
-26,"Todo perfecto, desde el embalaje hasta el funcionamiento.",positivo
-27,Llegó en tiempo récord y funciona de manera excelente.,positivo
-28,"Producto de calidad premium, muy satisfecho con la compra.",positivo
-29,"Excelente experiencia de compra, lo recomiendo totalmente.",positivo
-30,El producto es tal cual lo describe el vendedor. Muy bueno.,positivo
-31,Muy buen producto y excelente atención al cliente.,positivo
-32,"Llegó rápido, bien empacado y en perfectas condiciones.",positivo
-33,"Producto genial, mis hijos quedaron felices.",positivo
-34,"Funciona perfecto desde el primer uso, muy contento.",positivo
-35,"Excelente compra, lo mejor que he adquirido en línea.",positivo
-36,"Muy buena calidad, sin defectos. 100% recomendado.",positivo
-37,El envío fue muy rápido y el producto es de excelente calidad.,positivo
-38,"Satisfecho al 100%, producto tal como se describe.",positivo
-39,Producto de calidad y precio accesible. Lo recomiendo.,positivo
-40,"Todo en orden, el artículo cumple todas mis expectativas.",positivo
-41,"El producto llegó perfecto, el vendedor es confiable.",positivo
-42,"Muy buen artículo, lo usé de inmediato y funciona perfecto.",positivo
-43,"Excelente calidad, diseño elegante y precio razonable.",positivo
-44,"Llevo una semana usándolo y sin ningún problema, genial.",positivo
-45,"Producto muy bueno, llegó antes de lo prometido.",positivo
-46,"El artículo es igual a las fotos, de muy buena calidad.",positivo
-47,"Quedé muy satisfecho, el envío fue rápido y el producto impecable.",positivo
-48,"Funciona a la perfección, justo lo que necesitaba.",positivo
-49,"Todo excelente, desde la compra hasta la entrega.",positivo
-50,"Recomendado al 100%, producto de calidad garantizada.",positivo
-51,El producto llegó muy bien embalado y funciona perfecto.,positivo
-52,"Excelente vendedor, envío rápido y producto de calidad.",positivo
-53,"Muy buena compra, el artículo superó mis expectativas.",positivo
-54,"Producto de primera, el empaque estaba impecable.",positivo
-55,Llegó antes del tiempo estimado y en perfectas condiciones.,positivo
-56,"Muy contento con mi compra, el artículo es de calidad.",positivo
-57,"Excelente artículo, fácil de usar y muy duradero.",positivo
-58,"Rápida entrega, producto en perfectas condiciones.",positivo
-59,"Muy satisfecho, el producto funciona excelente.",positivo
-60,"Gran producto, gran vendedor. Volveré a comprar.",positivo
-61,"Todo llegó perfecto, el producto es de alta calidad.",positivo
-62,"Excelente calidad-precio, lo recomiendo ampliamente.",positivo
-63,El envío fue muy puntual y el producto sin fallas.,positivo
-64,"Producto de calidad, llegó embalado correctamente.",positivo
-65,"Me gustó mucho el artículo, cumple perfectamente su función.",positivo
-66,"Muy buen producto, lo recomendaría a cualquiera.",positivo
-67,"Excelente, el artículo es tal como se describe. Muy feliz.",positivo
-68,Llegó rápido y bien empacado. Producto de alta calidad.,positivo
-69,"Muy buen artículo, funciona a la perfección desde el primer día.",positivo
-70,"Producto genial, el envío muy rápido. Totalmente recomendado.",positivo
-71,"Excelente experiencia, el producto superó mis expectativas.",positivo
-72,Muy buena calidad y precio justo. Lo recomiendo.,positivo
-73,"Quedé encantado con el producto, llegó impecable.",positivo
-74,"Todo perfecto, producto de calidad y envío veloz.",positivo
-75,"Increíble relación calidad-precio, sin duda lo recomiendo.",positivo
-76,"Producto llegó roto, muy decepcionado con la compra.",negativo
-77,Tardó demasiado en llegar y cuando llegó estaba dañado.,negativo
-78,"Pésima calidad, se rompió al primer uso.",negativo
-79,El producto no es como en las fotos. Me sentí estafado.,negativo
-80,"Muy mala experiencia, el vendedor no respondió mis mensajes.",negativo
-81,"El artículo llegó incompleto, faltaban piezas esenciales.",negativo
-82,"Producto de muy baja calidad, no lo recomiendo para nada.",negativo
-83,"El envío tardó el doble de lo prometido, muy molesto.",negativo
-84,Llegó con la caja destruida y el producto rayado.,negativo
-85,No funciona como se describe. Completamente inútil.,negativo
-86,"Pésimo vendedor, no hace seguimiento del envío.",negativo
-87,"El producto huele muy mal, parece usado o de segunda mano.",negativo
-88,"No vale lo que cuesta, calidad muy inferior a lo esperado.",negativo
-89,"El artículo llegó en mal estado, el empaque estaba abierto.",negativo
-90,Muy decepcionado con la compra. Nunca más compraré aquí.,negativo
-91,"El producto no enciende, llegó sin funcionar.",negativo
-92,"Muy mala calidad, el material es plástico barato.",negativo
-93,Tardaron semanas en entregar y llegó dañado. Inaceptable.,negativo
-94,El color del producto es completamente diferente al de las fotos.,negativo
-95,"No sirve, tuve que devolverlo inmediatamente.",negativo
-96,Artículo defectuoso desde el primer uso. Muy molesto.,negativo
-97,"Pésima experiencia de compra, el vendedor es irresponsable.",negativo
-98,El producto se desarmó al primer día de uso. Muy mala calidad.,negativo
-99,El envío fue un desastre y el producto llegó en malas condiciones.,negativo
-100,"No recomiendo este vendedor, el producto no cumple lo prometido.",negativo
-101,"La calidad es una decepción total, no vale la pena.",negativo
-102,El producto llegó con piezas faltantes y sin instrucciones.,negativo
-103,Muy mala compra. El artículo no funciona correctamente.,negativo
-104,"El vendedor ignoró mis reclamaciones, pésimo servicio.",negativo
-105,El empaque estaba completamente destruido al llegar.,negativo
-106,"No coincide con la descripción, me siento engañado.",negativo
-107,"Producto falsificado, no es la marca original que anunciaban.",negativo
-108,"Llegó tarde y en malas condiciones, muy frustrado.",negativo
-109,"El artículo es de plástico muy frágil, se rompió al sacarlo.",negativo
-110,"Muy mala experiencia, no volvería a comprar en esta tienda.",negativo
-111,El producto no enciende ni con las pilas nuevas.,negativo
-112,Esperé semanas y el producto llegó incorrecto. Horrible.,negativo
-113,"El material es de muy baja calidad, no dura nada.",negativo
-114,"Pésimo empaque, el producto llegó todo golpeado.",negativo
-115,El artículo es mucho más pequeño de lo que indicaban las medidas.,negativo
-116,"Producto inútil, no cumple ninguna de sus funciones.",negativo
-117,Me llegó un producto diferente al que compré. Inaceptable.,negativo
-118,El vendedor no responde y el producto está defectuoso.,negativo
-119,"Muy decepcionante, la calidad es pésima para el precio que tiene.",negativo
-120,El artículo llegó sin garantía y con fallas evidentes.,negativo
-121,"No vale ni la mitad de lo que cuesta, una estafa total.",negativo
-122,"Producto con fallas de fábrica, completamente inservible.",negativo
-123,Tardó demasiado en llegar y no es lo que pedí. Terrible.,negativo
-124,"Muy mala compra, el artículo se deterioró en días.",negativo
-125,"El producto es una copia barata, nada que ver con el original.",negativo
-126,"Pésima experiencia de compra, no lo recomiendo.",negativo
-127,El producto no funciona con el voltaje de mi país.,negativo
-128,La pantalla se rayó sola en el primer día.,negativo
-129,"Producto de muy baja calidad, una completa decepción.",negativo
-130,El producto llegó dañado desde el exterior. Pésimo empaque del vendedor.,negativo
-131,"El producto vino completamente diferente al que pedí, un fraude total.",negativo
-132,"Se rompió a los dos días de uso, calidad deplorable.",negativo
-133,"El vendedor no respondió mis reclamaciones, pésimo servicio posventa.",negativo
-134,El artículo llegó sucio y con evidentes señales de uso previo.,negativo
-135,"Compré dos unidades y ambas llegaron defectuosas, terrible.",negativo
-136,El envío tardó un mes y el producto llegó en malas condiciones.,negativo
-137,"No encendió ni una sola vez, producto inservible desde la caja.",negativo
-138,El embalaje era tan malo que el artículo estaba completamente aplastado.,negativo
-139,Producto con partes faltantes y sin posibilidad de reclamación.,negativo
-140,"La descripción es completamente engañosa, no es lo que parece.",negativo
-141,El material es tan débil que se deformó solo al sacarlo del empaque.,negativo
-142,Llegó sin la garantía prometida y con instrucciones en idioma desconocido.,negativo
-143,El color era totalmente diferente y el vendedor no acepta devoluciones.,negativo
-144,Artículo de imitación barata vendido como producto original. Estafa.,negativo
-145,"El cable se quemó al primer uso, producto peligroso.",negativo
-146,El envío fue enviado a la dirección equivocada por descuido del vendedor.,negativo
-147,No cumple ninguna de las especificaciones técnicas que anunciaba.,negativo
-148,El producto huele a químicos fuertes y es inutilizable.,negativo
-149,Me cobraron dos veces y el vendedor se niega a reembolsar.,negativo
-150,La batería no carga y el vendedor dice que es culpa del usuario.,negativo
-151,"El producto cumple su función, aunque el nivel de ruido es mayor al esperado.",mixto
-152,"El producto es bueno, pero el envío tardó más de lo prometido.",mixto
-153,"Buena calidad, aunque el empaque llegó un poco golpeado.",mixto
-154,"Me gustó el artículo, sin embargo tuve problemas con el vendedor.",mixto
-155,"El producto funciona bien, pero la instrucciones están en otro idioma.",mixto
-156,"Llegó rápido, pero le faltaba un accesorio que venía en la foto.",mixto
-157,"Buen producto en general, aunque el color es diferente al de las fotos.",mixto
-158,"La calidad es aceptable, pero esperaba algo mejor por ese precio.",mixto
-159,"El artículo cumple su función, aunque el material podría ser mejor.",mixto
-160,"Buen vendedor, pero el producto tardó más de lo anunciado.",mixto
-161,"El producto es correcto, aunque las instrucciones no son muy claras.",mixto
-162,"Me gustó mucho el diseño, pero tuve problemas al instalarlo.",mixto
-163,"Funciona bien, aunque el empaque llegó con algunos golpes.",mixto
-164,"El artículo es bonito, pero la calidad no justifica el precio.",mixto
-165,"Buena experiencia en general, aunque la atención al cliente podría mejorar.",mixto
-166,"El producto llegó a tiempo, pero faltaban dos tornillos para armarlo.",mixto
-167,"Es un buen artículo, aunque el tamaño es un poco menor al esperado.",mixto
-168,"El envío fue rápido, pero el producto tiene un pequeño defecto estético.",mixto
-169,"Me agradó el producto, aunque el vendedor tardó en confirmar el pedido.",mixto
-170,"Funciona correctamente, pero el cable incluido es de mala calidad.",mixto
-171,"Buen producto por el precio, aunque el acabado podría ser mejor.",mixto
-172,"El artículo es funcional, pero llegó con la caja abierta.",mixto
-173,"Calidad aceptable, aunque tuve que esperar más de lo normal para recibirlo.",mixto
-174,"El producto se ve bien, pero al usarlo noto que no es tan resistente.",mixto
-175,"Buen precio y buena calidad, aunque la entrega tuvo un retraso.",mixto
-176,"El artículo cumple lo básico, pero esperaba más funciones.",mixto
-177,"El vendedor es atento, aunque el producto tiene algunas imperfecciones.",mixto
-178,"Me llegó rápido, pero el artículo no coincide exactamente con la descripción.",mixto
-179,"El producto es útil, pero el manual de instrucciones es muy confuso.",mixto
-180,"Buena compra en general, aunque el empaque interno era muy básico.",mixto
-181,"El artículo funciona, pero el material se siente algo frágil.",mixto
-182,"Buen diseño y buen precio, aunque tardó más de lo esperado.",mixto
-183,"El producto cumple su función, pero le falta durabilidad.",mixto
-184,"Llegó bien, aunque el color no era exactamente el que mostrada la foto.",mixto
-185,"La calidad es buena, pero el proceso de compra fue complicado.",mixto
-186,"Me gustó el producto, aunque tuve que contactar al vendedor por un problema menor.",mixto
-187,"El artículo es bonito y práctico, aunque el envío fue lento.",mixto
-188,"Funciona bien en general, pero la batería no dura tanto como decían.",mixto
-189,"Buena relación calidad-precio, aunque la atención posventa es mejorable.",mixto
-190,"El producto llegó completo, pero un detalle del acabado estaba mal.",mixto
-191,"Es lo que buscaba, aunque el tamaño es ligeramente diferente al indicado.",mixto
-192,"Buen artículo, aunque el embalaje podría proteger mejor el producto.",mixto
-193,"Me satisface el producto, pero demoró más de dos semanas en llegar.",mixto
-194,"El artículo tiene buena calidad, aunque uno de los accesorios vino defectuoso.",mixto
-195,"Buen precio, pero la calidad del material deja algo que desear.",mixto
-196,"El producto es práctico, aunque el vendedor no respondió mis preguntas a tiempo.",mixto
-197,"Funciona como se describe, pero el color llegó diferente al pedido.",mixto
-198,"Me gustó la presentación, aunque el producto tiene algunas limitaciones.",mixto
-199,"Es un buen producto, aunque llegó con el empaque deteriorado.",mixto
-200,"La calidad es aceptable, pero el precio me parece algo elevado.",mixto
-201,"El artículo es útil, pero esperaba mejor acabado por ese costo.",mixto
-202,"Buen vendedor y rápido envío, aunque el producto tiene un defecto menor.",mixto
-203,"El producto cumple, aunque las instrucciones de uso son escasas.",mixto
-204,"Me llegó en buen estado, pero la conexión falla ocasionalmente.",mixto
-205,"Buena compra por el precio, aunque el diseño podría mejorar.",mixto
-206,"El artículo es correcto, aunque me tardé en configurarlo por falta de información.",mixto
-207,"El producto es bonito, pero la resistencia no es la mejor.",mixto
-208,"Envío puntual, aunque el producto presenta pequeñas fallas de fábrica.",mixto
-209,"Buen artículo en general, aunque la caja llegó algo maltratada.",mixto
-210,"El producto es funcional, pero le falta acabado en algunos detalles.",mixto
-211,"Me gustó, aunque no era exactamente lo que esperaba por el precio pagado.",mixto
-212,"Es un producto decente, aunque hay mejores opciones en el mercado.",mixto
-213,"Llegó a tiempo, pero el producto tiene un olor raro que no desaparece.",mixto
-214,"La calidad es buena, aunque el servicio de entrega dejó mucho que desear.",mixto
-215,"El artículo funciona bien, aunque uno de los botones es poco intuitivo.",mixto
-216,"Buen producto para uso básico, aunque no es apto para uso intensivo.",mixto
-217,"Me gustó el acabado, pero el producto tardó demasiado en llegar.",mixto
-218,"El artículo es como se describe, aunque el vendedor no fue muy comunicativo.",mixto
-219,"Funciona correctamente, aunque el primer día tuvo algunos fallos menores.",mixto
-220,"Buen precio, aunque la calidad del cable incluido es bastante deficiente.",mixto
-221,"El producto llegó completo y funcional, aunque el empaque estaba dañado.",mixto
-222,"El pedido fue puntual, aunque el producto tiene menos funciones de las esperadas.",mixto
-223,"Me gustó el artículo, pero el proceso de devolución fue complicado.",mixto
-224,"El producto tiene buena presentación, aunque la durabilidad es cuestionable.",mixto
-225,"Buena calidad en general, aunque tuve que esperar una semana extra.",mixto
-226,"El artículo es correcto, llegó como se esperaba.",neutro
-227,"Recibí el pedido sin novedades, el producto es estándar.",neutro
-228,"El producto es normal, funciona como cualquier artículo de esta categoría.",neutro
-229,"Llegó el tiempo estimado, el artículo no tiene nada especial.",neutro
-230,"El producto cumple lo básico, ni más ni menos.",neutro
-231,"Artículo recibido correctamente, el vendedor cumplió con los tiempos.",neutro
-232,"El artículo no me sorprendió, pero tampoco me decepcionó.",neutro
-233,"El producto es funcional, no más no menos.",neutro
-234,"Recibí el artículo a tiempo y en buen estado, todo en orden.",neutro
-235,El producto es correcto para uso básico.,neutro
-236,"El envío fue normal, el producto llega como se esperaba.",neutro
-237,"Es un producto estándar, cumple lo que promete sin sobresalir.",neutro
-238,El artículo llegó en el tiempo indicado y sin problemas.,neutro
-239,"El producto es adecuado, sin grandes virtudes ni defectos.",neutro
-240,"Llegó bien, es lo que se esperaba por ese precio.",neutro
-241,"El artículo es correcto, el envío fue puntual.",neutro
-242,El producto cumple su función básica sin ningún problema.,neutro
-243,"Recibí el artículo en buenas condiciones, nada fuera de lo normal.",neutro
-244,"El producto es lo que se describe, sin sorpresas.",neutro
-245,"El artículo es adecuado, no tiene nada especial.",neutro
-246,El producto llegó bien empacado y funciona correctamente.,neutro
-247,El envío fue normal y el artículo está en buen estado.,neutro
-248,"El producto cumple con lo descrito, sin más ni menos.",neutro
-249,"Es un artículo correcto, sin defectos pero tampoco sin destacar.",neutro
-250,"El producto llegó a tiempo, todo correcto.",neutro
-251,El artículo es funcional y llegó en las condiciones esperadas.,neutro
-252,"Producto recibido en buen estado, el envío fue estándar.",neutro
-253,"El artículo es normal, cumple su función sin sorprender.",neutro
-254,El producto es lo que se espera por ese precio.,neutro
-255,Llegó en el tiempo prometido y sin problemas adicionales.,neutro
-256,"El artículo es correcto, el vendedor cumplió con el pedido.",neutro
-257,"El producto funciona bien, nada extraordinario.",neutro
-258,"El envío fue puntual, el artículo llegó en buen estado.",neutro
-259,"Es un producto estándar, hace lo que promete.",neutro
-260,"Recibí el artículo sin problemas, todo según lo esperado.",neutro
-261,El producto es adecuado para el uso cotidiano.,neutro
-262,"Llegó bien y funciona, sin nada que resaltar.",neutro
-263,"El artículo es correcto, todo llegó en orden.",neutro
-264,"El producto cumple su propósito, nada más.",neutro
-265,El envío fue correcto y el artículo está en buen estado.,neutro
-266,"Es lo que dice ser, sin más. Correcto y funcional.",neutro
-267,"El producto llegó como se esperaba, sin contratiempos.",neutro
-268,"Artículo recibido correctamente, sin observaciones especiales.",neutro
-269,"El producto es normal, cumple lo básico.",neutro
-270,El artículo llegó a tiempo y en condiciones aceptables.,neutro
-271,"El producto hace lo que se indica, nada fuera de lo común.",neutro
-272,"Recibí el pedido en buen estado, el proceso fue normal.",neutro
-273,"El artículo es lo que se describe, funciona correctamente.",neutro
-274,"El producto es estándar, correcto para uso diario.",neutro
-275,El envío fue a tiempo y el artículo llegó en buenas condiciones.,neutro
-276,"Todo llegó como se esperaba, sin comentarios adicionales.",neutro
-277,"El producto funciona, el envío fue puntual.",neutro
-278,"Artículo correcto, llegó sin problemas.",neutro
-279,"El producto es lo esperado, funciona sin fallas.",neutro
-280,"El envío fue normal, artículo en buen estado.",neutro
-281,"El producto cumple, llegó correctamente.",neutro
-282,"Todo fue según lo esperado, artículo funcional.",neutro
-283,El artículo llegó bien y funciona como debe.,neutro
-284,El producto es correcto para lo que se usa.,neutro
-285,Recibí el pedido a tiempo y en buenas condiciones.,neutro
-286,"El artículo es lo que se describe, sin observaciones.",neutro
-287,"El producto cumple su función, el envío fue estándar.",neutro
-288,"Llegó correctamente, el artículo no tiene defectos aparentes.",neutro
-289,El producto es aceptable para uso básico.,neutro
-290,El envío fue puntual y el artículo llegó en buen estado.,neutro
-291,"El producto cumple lo que promete, sin más.",neutro
-292,"Artículo recibido, todo en orden.",neutro
-293,El producto es funcional y llegó a tiempo.,neutro
-294,"Recibí el artículo en el plazo indicado, todo correcto.",neutro
-295,"El artículo llegó bien, el producto es lo esperado.",neutro
-296,"El envío fue correcto, el producto es estándar.",neutro
-297,"Todo llegó en orden, el artículo es funcional.",neutro
-298,"El producto no tiene nada especial, pero cumple.",neutro
-299,"El artículo llegó en buenas condiciones, todo normal.",neutro
-300,"El producto es correcto, el envío fue a tiempo.",neutro
+1,Excelente.,positivo
+2,Muy bueno.,positivo
+3,Me encantó.,positivo
+4,10/10.,positivo
+5,Super bien.,positivo
+6,Todo perfecto.,positivo
+7,Recomendado.,positivo
+8,Sí sirve.,positivo
+9,Buenísimo!!,positivo
+10,Me gusto mucho.,positivo
+11,Esta chido.,positivo
+12,funciona bn,positivo
+13,llego rapido,positivo
+14,muy buen producto!!!,positivo
+15,exelente compra,positivo
+16,me yego en buen estado,positivo
+17,todo ok,positivo
+18,sin quejas,positivo
+19,jalo perfecto,positivo
+20,esta padre,positivo
+21,"El producto llegó rápido y en muy buen estado, la verdad me gustó bastante.",positivo
+22,"Me encantó la calidad, se siente resistente y cumple perfecto con lo que necesitaba.",positivo
+23,"Excelente compra, llegó antes de lo esperado y funciona sin fallas.",positivo
+24,"Muy buen artículo, el precio está justo y la entrega fue rápida.",positivo
+25,"El pedido llegó completo, bien empacado y sin ningún detalle.",positivo
+26,La app fue fácil de usar y pude comprar sin problemas.,positivo
+27,"Me gustó mucho el producto, es igual al de las fotos.",positivo
+28,"Buena calidad, buen tamaño y buena presentación.",positivo
+29,El envío fue puntual y el producto llegó impecable.,positivo
+30,"Funciona perfecto desde el primer día, muy recomendable.",positivo
+31,La tela se siente cómoda y la talla fue correcta.,positivo
+32,Los audífonos se escuchan muy bien y la batería dura bastante.,positivo
+33,"El cargador carga rápido y no se calienta, excelente.",positivo
+34,El juguete llegó completo y a mi sobrino le encantó.,positivo
+35,La crema llegó sellada y con muy buena presentación.,positivo
+36,El sartén es práctico y no se pega la comida.,positivo
+37,"Muy satisfecho con la compra, todo salió mejor de lo esperado.",positivo
+38,El producto se ve de buena calidad y llegó sin golpes.,positivo
+39,Me gustó que el paquete venía bien protegido.,positivo
+40,Excelente atención y el pedido llegó en tiempo.,positivo
+41,"La mochila está amplia, bonita y con buenos acabados.",positivo
+42,Los tenis son cómodos y se ven de buena calidad.,positivo
+43,"La bocina suena fuerte y claro, superó mis expectativas.",positivo
+44,El reloj llegó funcionando bien y se ve elegante.,positivo
+45,"Me encantó el diseño, se ve moderno y resistente.",positivo
+46,"La compra fue sencilla, rápida y segura.",positivo
+47,El producto cumple muy bien con lo que promete.,positivo
+48,"Llegó antes de la fecha indicada, muy buen servicio.",positivo
+49,"Todo venía completo, con accesorios y manual.",positivo
+50,El artículo está bonito y se nota que es durable.,positivo
+51,"Me gustó mucho, sin duda volvería a comprar.",positivo
+52,"Buena relación calidad precio, lo recomiendo.",positivo
+53,"El producto llegó limpio, nuevo y en buenas condiciones.",positivo
+54,La licuadora tiene buena potencia y funciona excelente.,positivo
+55,La camiseta tiene buen color y la tela está suave.,positivo
+56,El producto se instaló rápido y funciona al cien.,positivo
+57,"Muy buena experiencia, no tuve ningún inconveniente.",positivo
+58,El empaque venía perfecto y el artículo sin daños.,positivo
+59,El pedido llegó rápido y exactamente como lo solicité.,positivo
+60,"Me gustó la calidad del material, se siente firme.",positivo
+61,El producto es práctico y fácil de usar.,positivo
+62,"Todo correcto, el pago fue rápido y el envío también.",positivo
+63,Excelente producto para el precio que tiene.,positivo
+64,"El artículo llegó muy bien cuidado, sin rayones.",positivo
+65,La talla coincidió perfectamente con la guía.,positivo
+66,"La batería dura bastante, mejor de lo que esperaba.",positivo
+67,La presentación del producto es muy buena.,positivo
+68,El vendedor atendió rápido y resolvió mis dudas.,positivo
+69,La entrega fue muy rápida y el producto excelente.,positivo
+70,"Estoy contento con la compra, funciona muy bien.",positivo
+71,"El producto es bonito, útil y de buena calidad.",positivo
+72,"Llegó en tiempo y forma, todo sin problemas.",positivo
+73,"Me sorprendió la calidad, está mejor de lo que pensé.",positivo
+74,"Es justo lo que buscaba, cumple perfectamente.",positivo
+75,"Muy recomendable, el artículo llegó en perfecto estado.",positivo
+76,La app mostró bien el seguimiento y el pedido llegó rápido.,positivo
+77,El producto se ve original y funciona correctamente.,positivo
+78,El empaque estaba cerrado y bien protegido.,positivo
+79,"La compra fue muy buena, el producto salió excelente.",positivo
+80,Me gustó porque es fácil de usar y se ve resistente.,positivo
+81,El envío fue seguro y el paquete llegó completo.,positivo
+82,La calidad del producto es muy buena por el precio.,positivo
+83,El producto llegó sin fallas y listo para usar.,positivo
+84,La chamarra está cómoda y se ve de buena calidad.,positivo
+85,El set de cocina llegó completo y muy bien empacado.,positivo
+86,La crema funciona bien y llegó en buen estado.,positivo
+87,La bocina tiene buen volumen y buen diseño.,positivo
+88,El producto cumplió todas mis expectativas.,positivo
+89,"Excelente compra, no tengo ninguna queja.",positivo
+90,"Todo llegó perfecto, se nota el cuidado en el envío.",positivo
+91,El artículo es resistente y se ve muy bien.,positivo
+92,"Muy buena calidad, lo recomiendo ampliamente.",positivo
+93,El pedido llegó antes de lo prometido y sin detalles.,positivo
+94,"Me gustó mucho el producto, volvería a pedirlo.",positivo
+95,El servicio fue rápido y el producto llegó excelente.,positivo
+96,"La compra fue mejor de lo que esperaba porque el producto venía bien protegido, llegó antes de la fecha marcada y desde el primer uso funcionó correctamente.",positivo
+97,"Aunque no conocía la tienda, la experiencia fue muy buena: el pago se realizó sin problemas, el seguimiento fue claro y el artículo llegó completo.",positivo
+98,"El producto me sorprendió bastante porque se siente resistente, tiene buen acabado y el precio fue razonable para la calidad que ofrece.",positivo
+99,"Lo compré para uso diario y hasta ahora ha funcionado excelente, no se ha calentado, no presentó fallas y llegó en perfectas condiciones.",positivo
+100,"Me agradó que el paquete llegara cerrado y con buena protección; además, el artículo era exactamente como aparecía en la publicación.",positivo
+101,"Me gustó el cargador, se ve resistente y de buena calidad.",positivo
+102,"Buen producto, el plancha de cabello cumple con lo prometido. jeje",positivo
+103,La compra del pantalón fue sencilla y llegó sin problemas.,positivo
+104,"pues Todo bien con el peluche, llegó completo.",positivo
+105,"Buen producto, el gel cumple con lo prometido.",positivo
+106,La compra del jabón fue sencilla y llegó sin problemas.,positivo
+107,"El muñeca superó mis expectativas, lo recomiendo.",positivo
+108,"ok, El vaso tiene buen precio y buena presentación.",positivo
+109,El rompecabezas está mejor de lo que esperaba.,positivo
+110,pues El rasuradora llegó rápido y funciona muy bien.,positivo
+111,"mmm Me gustó el pelota, se ve resistente y de buena calidad.!!!",positivo
+112,La compra del rasuradora fue sencilla y llegó sin problemas.!!!,positivo
+113,La compra del tenis fue sencilla y llegó sin problemas.,positivo
+114,"Todo bien con el pantalón, llegó completo.",positivo
+115,El pantalón llegó rápido y funciona muy bien.,positivo
+116,"mmm Muy buen gorra, no tuve fallas ni detalles. :)",positivo
+117,"Muy buen shampoo, no tuve fallas ni detalles.",positivo
+118,La compra del plancha de cabello fue sencilla y llegó sin problemas.,positivo
+119,El drone infantil está mejor de lo que esperaba.,positivo
+120,La compra del cable USB fue sencilla y llego sin problemas.,positivo
+121,"Me gustó el lámpara led, se ve resistente y de buena calidad.",positivo
+122,"ok, Muy buen molde, no tuve fallas ni detalles. pero bueno",positivo
+123,"Todo bien con el audífonos, llegó completo.",positivo
+124,"El power bank superó mis expectativas, lo recomiendo. pero bueno",positivo
+125,"Todo bien con el jabón, llegó completo. :(",positivo
+126,"mmm Todo bien con el molde, llegó completo.!!!",positivo
+127,"Me gustó el rompecabezas, se ve resistente y de buena calidad.",positivo
+128,"Excelente sudadera, llegó bien empacado y listo para usar.",positivo
+129,"Me gustó el jabón, se ve resistente y de buena calidad.",positivo
+130,"ok, Todo bien con el tenis, llegó completo. :)",positivo
+131,mmm La compra del perfume fue sencilla y llegó sin problemas. pero bueno,positivo
+132,El power bank tiene buen precio y buena presentación. la neta,positivo
+133,El pantalón está mejor de lo que esperaba. :),positivo
+134,"El mouse superó mis expectativas, lo recomiendo.",positivo
+135,El mochila tiene buen precio y buena presentación.,positivo
+136,El freidora está mejor de lo que esperaba.,positivo
+137,"ok, Muy buen chamarra, no tuve fallas ni detalles. la neta",positivo
+138,El secadora tiene buen precio y buena presentación.,positivo
+139,"la verdad El tablet superó mis expectativas, lo recomiendo. en fin",positivo
+140,"la verdad Muy buen camiseta, no tuve fallas ni detalles.",positivo
+141,"Todo bien con el tablet, llegó completo.",positivo
+142,"Muy buen reloj inteligente, no tuve fallas ni detalles. jeje",positivo
+143,El blusa tiene buen precio y buena presentación.,positivo
+144,"Todo bien con el rasuradora, llegó completo.",positivo
+145,La compra del reloj inteligente fue sencilla y llegó sin problemas.,positivo
+146,"sinceramente El reloj inteligente superó mis expectativas, lo recomiendo. en fin",positivo
+147,"Todo bien con el tenis, llegó completo.!!!",positivo
+148,la verdad La compra del set de bloques fue sencilla y llegó sin problemas.,positivo
+149,"Muy buen rasuradora, no tuve fallas ni detalles.",positivo
+150,"Excelente mochila, llegó bien empacado y listo para usar.",positivo
+151,Malo.,negativo
+152,No sirve.,negativo
+153,Pésimo.,negativo
+154,No llegó.,negativo
+155,Muy mal.,negativo
+156,Defectuoso.,negativo
+157,No prende.,negativo
+158,Horrible.,negativo
+159,Nada que ver.,negativo
+160,Decepcionante.,negativo
+161,no jalo,negativo
+162,llego roto,negativo
+163,no funsiona,negativo
+164,mala compra,negativo
+165,venia avierto,negativo
+166,tardo muchisimo,negativo
+167,que mal servicio,negativo
+168,no me gusto,negativo
+169,pesima calidad!!!,negativo
+170,me cobraron doble,negativo
+171,El producto llegó dañado y no funcionó desde que lo saqué de la caja.,negativo
+172,"Muy mala calidad, se rompió al primer uso.",negativo
+173,El pedido tardó demasiado y llegó todo golpeado.,negativo
+174,"No es igual al de la foto, me sentí engañado.",negativo
+175,El vendedor nunca respondió mis mensajes.,negativo
+176,"El artículo llegó incompleto, faltaban piezas importantes.",negativo
+177,La calidad es muy baja para el precio que pagué.,negativo
+178,El producto venía abierto y con señales de uso.,negativo
+179,"No lo recomiendo, dejó de funcionar al segundo día.",negativo
+180,La caja llegó aplastada y el producto estaba rayado.,negativo
+181,"La talla no corresponde, viene mucho más chica.",negativo
+182,"El cargador se calienta demasiado, no me da confianza usarlo.",negativo
+183,Los audífonos se escuchan mal y uno no prende.,negativo
+184,La bocina llegó golpeada y con un ruido raro.,negativo
+185,"El producto huele muy feo, parece de mala calidad.",negativo
+186,"No cumple con la descripción, nada que ver con lo anunciado.",negativo
+187,Me llegó un producto diferente al que compré.,negativo
+188,El material es muy frágil y se siente barato.,negativo
+189,La app falló al pagar y aun así me hicieron el cargo.,negativo
+190,El pedido llegó tarde y nadie me avisó nada.,negativo
+191,La prenda llegó manchada y mal empacada.,negativo
+192,El juguete llegó sin una pieza y no se puede usar.,negativo
+193,"La crema venía abierta, no me dio confianza.",negativo
+194,El sartén se rayó desde el primer uso.,negativo
+195,"El producto no prende, llegó defectuoso.",negativo
+196,"Muy mala compra, esperaba algo mejor por ese precio.",negativo
+197,El empaque estaba roto y el producto sucio.,negativo
+198,"No sirve como lo prometen, fue dinero perdido.",negativo
+199,"La batería dura muy poco, no cumple lo anunciado.",negativo
+200,El artículo llegó con golpes y sin protección.,negativo
+201,El color es diferente al que pedí.,negativo
+202,La tela está muy delgada y se siente corriente.,negativo
+203,El producto se desarmó al poco tiempo de usarlo.,negativo
+204,El vendedor canceló tarde y no explicó el motivo.,negativo
+205,La entrega fue lenta y el paquete llegó maltratado.,negativo
+206,No pude usarlo porque venía sin instrucciones.,negativo
+207,"El producto parece imitación, no se ve original.",negativo
+208,Compré dos piezas y una llegó rota.,negativo
+209,"No me gustó nada, la calidad es deficiente.",negativo
+210,El cierre de la mochila se rompió el primer día.,negativo
+211,Los zapatos lastiman y la talla está mal.,negativo
+212,El reloj llegó sin funcionar y con la pantalla rayada.,negativo
+213,El artículo no trae los accesorios que muestra la publicación.,negativo
+214,El producto llegó mojado dentro del paquete.,negativo
+215,La compra fue complicada y el soporte no ayudó.,negativo
+216,La licuadora hace mucho ruido y huele a quemado.,negativo
+217,El producto no tiene la potencia que decía la descripción.,negativo
+218,"Estoy muy decepcionado, no volvería a comprar aquí.",negativo
+219,La caja llegó abierta y faltaba el manual.,negativo
+220,El material se rompió con un uso normal.,negativo
+221,El pedido llegó incompleto y nadie resolvió mi reclamo.,negativo
+222,"El producto venía rayado, parecía usado.",negativo
+223,La app marcaba entregado pero no recibí nada.,negativo
+224,El artículo es mucho más pequeño que en la imagen.,negativo
+225,"No carga bien, se desconecta a cada rato.",negativo
+226,El producto llegó tarde y además venía defectuoso.,negativo
+227,"La calidad no justifica el precio, está muy malo.",negativo
+228,El vendedor prometió enviar repuesto y ya no contestó.,negativo
+229,"No me sirvió, las medidas publicadas están mal.",negativo
+230,El producto falló después de unos minutos de uso.,negativo
+231,La costura viene mal hecha y se empezó a abrir.,negativo
+232,El artículo no coincide con la descripción de la tienda.,negativo
+233,"El empaque no protegió nada, llegó todo golpeado.",negativo
+234,"Muy mala experiencia, el pedido llegó equivocado.",negativo
+235,"El producto no es resistente, se dobló muy fácil.",negativo
+236,"La crema llegó caducada, eso no debería pasar.",negativo
+237,La atención fue lenta y no solucionaron el problema.,negativo
+238,El juguete no prende aunque le puse pilas nuevas.,negativo
+239,El producto es incómodo y de mala fabricación.,negativo
+240,"No sirve para lo que se anuncia, me decepcionó.",negativo
+241,El paquete llegó sin sellos y con el artículo maltratado.,negativo
+242,El color se despintó después del primer lavado.,negativo
+243,El producto llegó con piezas flojas y mal armado.,negativo
+244,Me cobraron envío aunque decía que era gratis.,negativo
+245,"No recomiendo comprarlo, salió defectuoso y caro.",negativo
+246,"La experiencia fue mala desde el inicio: la app marcó error al pagar, después el pedido apareció como enviado y finalmente llegó un producto diferente.",negativo
+247,"El paquete venía abierto, el producto tenía marcas de uso y al intentar reportarlo no recibí una respuesta clara del vendedor.",negativo
+248,"Me decepcionó porque la publicación prometía buena calidad, pero el material se siente débil y el artículo falló casi de inmediato.",negativo
+249,"No pude usar el producto porque llegó incompleto, sin manual y con una pieza rota; además, el soporte tardó demasiado en contestar.",negativo
+250,"El pedido llegó varios días tarde y en malas condiciones, la caja estaba aplastada y el artículo no funcionó correctamente.",negativo
+251,pues El set de bloques tardó mucho en llegar y llegó maltratado. pero bueno,negativo
+252,"Muy mala calidad del audífonos, no lo recomiendo.",negativo
+253,"Muy mala calidad del mouse, no lo recomiendo.",negativo
+254,El muñeca venía abierto y con señales de uso.,negativo
+255,pues El blusa no coincide con la descripción. en fin,negativo
+256,"Muy mala calidad del cable USB, no lo recomiendo. en fin",negativo
+257,"No sirve el mochila, fue dinero perdido.",negativo
+258,El licuadora se rompió al poco tiempo de usarlo.,negativo
+259,El bocina tardó mucho en llegar y llegó maltratado. :(,negativo
+260,El perfume se rompió al poco tiempo de usarlo.,negativo
+261,mmm El vaso venía abierto y con señales de uso. en fin,negativo
+262,El short llegó dañado y no funciona.,negativo
+263,la verdad El muñeca llegó dañado y no funciona.,negativo
+264,El peluche se rompió al poco tiempo de usarlo.,negativo
+265,"No me gustó el tenis, se siente barato.",negativo
+266,"mmm Pésima compra, el cargador falló rápido. jeje",negativo
+267,"No me gustó el gorra, se siente barato. jeje",negativo
+268,sinceramente El pantalón llegó incompleto y nadie resolvió. la neta,negativo
+269,"la verdad No me gustó el pantalón, se siente barato. jeje",negativo
+270,"ok, Muy mala calidad del protector solar, no lo recomiendo. en fin",negativo
+271,El power bank llegó dañado y no funciona.,negativo
+272,"ok, No sirve el zapatos, fue dinero perdido. la neta",negativo
+273,El drone infantil no coincide con la descripción.,negativo
+274,"Pésima compra, el freidora falló rápido. jeje",negativo
+275,mmm El drone infantil no coincide con la descripción. la neta,negativo
+276,"Muy mala calidad del secadora, no lo recomiendo.",negativo
+277,"Pésima compra, el juguete falló rápido.",negativo
+278,El chamarra venía abierto y con señales de uso.,negativo
+279,El tabla para picar venía abierto y con señales de uso.,negativo
+280,"ok, El short llegó dañado y no funciona. la neta",negativo
+281,sinceramente El cepillo llegó incompleto y nadie resolvió.!!!,negativo
+282,El olla tardó mucho en llegar y llegó maltratado.,negativo
+283,"pues Muy mala calidad del jabón, no lo recomiendo. :)",negativo
+284,sinceramente El cargador venía abierto y con señales de uso.,negativo
+285,"No sirve el chamarra, fue dinero perdido.",negativo
+286,"Pésima compra, el sudadera falló rápido.",negativo
+287,"No me gustó el camiseta, se siente barato.",negativo
+288,El reloj inteligente llegó incompleto y nadie resolvió.,negativo
+289,"sinceramente Muy mala calidad del juego de mesa, no lo recomiendo. en fin",negativo
+290,"No sirve el juguete, fue dinero perdido.",negativo
+291,"No sirve el secadora, fue dinero perdido.",negativo
+292,El figura se rompió al poco tiempo de usarlo.,negativo
+293,la verdad El figura llegó incompleto y nadie resolvió. :(,negativo
+294,"pues Muy mala calidad del perfume, no lo recomiendo. la neta",negativo
+295,la verdad El teclado se rompió al poco tiempo de usarlo. jeje,negativo
+296,"No me gustó el mouse, se siente barato.",negativo
+297,"ok, El peluche llegó incompleto y nadie resolvió. jeje",negativo
+298,"ok, No sirve el gel, fue dinero perdido. pero bueno",negativo
+299,El jabón tardó mucho en llegar y llegó maltratado.,negativo
+300,"Pésima compra, el vaso falló rápido.",negativo
+301,Normal.,neutro
+302,Regular.,neutro
+303,Recibido.,neutro
+304,Cumple.,neutro
+305,Sin comentarios.,neutro
+306,Todo estándar.,neutro
+307,Es básico.,neutro
+308,Llegó.,neutro
+309,Funciona.,neutro
+310,Producto simple.,neutro
+311,esta normal,neutro
+312,llego ok,neutro
+313,sin novedad,neutro
+314,ni bien ni mal,neutro
+315,cumple lo basico,neutro
+316,es lo que dice,neutro
+317,pedido recibido,neutro
+318,todo igual,neutro
+319,uso normal,neutro
+320,no destaca,neutro
+321,El producto llegó en la fecha indicada y corresponde a la descripción.,neutro
+322,El artículo es funcional y cumple con lo básico.,neutro
+323,Recibí el pedido sin problemas adicionales.,neutro
+324,"El producto es normal, no destaca pero funciona.",neutro
+325,Llegó en buen estado y con el empaque cerrado.,neutro
+326,El artículo es igual al publicado en la tienda.,neutro
+327,La compra se realizó sin inconvenientes.,neutro
+328,El producto cumple su función de manera estándar.,neutro
+329,El envío llegó dentro del tiempo estimado.,neutro
+330,El artículo recibido coincide con la orden de compra.,neutro
+331,El producto tiene características básicas para uso diario.,neutro
+332,La entrega fue normal y el paquete llegó completo.,neutro
+333,El producto funciona como se indica en la descripción.,neutro
+334,No tengo comentarios adicionales sobre el artículo.,neutro
+335,El pedido llegó correctamente y sin observaciones.,neutro
+336,El artículo es adecuado para un uso sencillo.,neutro
+337,La talla corresponde a la guía publicada.,neutro
+338,El producto se recibió en condiciones aceptables.,neutro
+339,La caja llegó cerrada y el contenido completo.,neutro
+340,El producto es similar a otros artículos de la misma categoría.,neutro
+341,La app permitió completar la compra sin cambios importantes.,neutro
+342,El artículo cumple con las especificaciones generales.,neutro
+343,El pedido fue entregado en el domicilio registrado.,neutro
+344,El producto tiene un diseño común y funcional.,neutro
+345,Recibí el producto y pude usarlo de forma normal.,neutro
+346,El envío se realizó conforme al tiempo señalado.,neutro
+347,El artículo es sencillo y cumple lo necesario.,neutro
+348,El producto llegó sin daños visibles.,neutro
+349,La compra quedó registrada correctamente en la app.,neutro
+350,El producto corresponde al modelo seleccionado.,neutro
+351,El artículo funciona de acuerdo con su categoría.,neutro
+352,El paquete llegó con el contenido esperado.,neutro
+353,El producto es de uso básico y presentación regular.,neutro
+354,La entrega fue realizada sin incidencias.,neutro
+355,El artículo no presenta fallas aparentes.,neutro
+356,El producto tiene una calidad acorde al precio.,neutro
+357,La información de la publicación coincide con el pedido.,neutro
+358,El producto llegó en condiciones normales.,neutro
+359,El envío fue procesado de manera estándar.,neutro
+360,El artículo es correcto para tareas simples.,neutro
+361,La compra fue completada y el producto fue entregado.,neutro
+362,El producto no tiene características especiales.,neutro
+363,El paquete llegó con los accesorios indicados.,neutro
+364,La prenda corresponde al color seleccionado.,neutro
+365,El producto puede utilizarse para lo que fue comprado.,neutro
+366,La entrega se completó sin reportes adicionales.,neutro
+367,El artículo es como aparece en la descripción.,neutro
+368,El producto tiene funcionamiento regular.,neutro
+369,Recibí el pedido completo y sin cambios.,neutro
+370,El producto es adecuado para uso ocasional.,neutro
+371,El artículo llegó con su empaque original.,neutro
+372,El proceso de compra fue normal.,neutro
+373,El producto cumple con lo indicado en la ficha.,neutro
+374,La entrega llegó en el horario aproximado.,neutro
+375,El artículo se ve igual al mostrado en la publicación.,neutro
+376,El pedido fue entregado sin modificaciones.,neutro
+377,El producto tiene un desempeño esperado.,neutro
+378,La app mostró correctamente el estado del pedido.,neutro
+379,El artículo llegó en condiciones de uso.,neutro
+380,El producto es simple y cumple su propósito.,neutro
+381,La compra no presentó problemas relevantes.,neutro
+382,El paquete fue recibido en el tiempo señalado.,neutro
+383,El artículo corresponde a la cantidad solicitada.,neutro
+384,El producto es estándar dentro de su tipo.,neutro
+385,La entrega fue registrada como completada.,neutro
+386,El artículo puede usarse sin configuraciones complejas.,neutro
+387,El producto llegó con la información básica.,neutro
+388,La compra se realizó de manera habitual.,neutro
+389,El pedido llegó completo y sin comentarios adicionales.,neutro
+390,El producto tiene un uso sencillo.,neutro
+391,El artículo fue entregado en el plazo indicado.,neutro
+392,La presentación del producto es convencional.,neutro
+393,El producto funciona de forma normal.,neutro
+394,El pedido coincide con lo solicitado en la app.,neutro
+395,El artículo llegó correctamente y se puede utilizar.,neutro
+396,"El producto fue recibido dentro del periodo estimado; al revisarlo, corresponde al modelo publicado y no se identificaron diferencias importantes.",neutro
+397,"La compra se completó de forma habitual, el seguimiento mostró los cambios de estado y el artículo llegó con las características indicadas.",neutro
+398,El paquete contenía el producto solicitado y los accesorios mencionados en la descripción; no se realizaron observaciones adicionales.,neutro
+399,"El artículo tiene un funcionamiento básico, suficiente para el uso indicado en la publicación, sin elementos destacables.",neutro
+400,La entrega se realizó en el domicilio registrado y el producto coincide con la información general que aparece en la tienda.,neutro
+401,El pantalón puede usarse para lo indicado.,neutro
+402,El cargador tiene presentación estándar.,neutro
+403,sinceramente La compra del secadora se realizó sin cambios.!!!,neutro
+404,El cargador llegó completo y sin observaciones.,neutro
+405,El teclado llegó en condiciones normales.,neutro
+406,mmm Recibí el reloj inteligente dentro del tiempo estimado. :),neutro
+407,El jabón es igual al publicado.,neutro
+408,La compra del zapatos se realizó sin cambios.,neutro
+409,El reloj inteligente llegó completo y sin observaciones.,neutro
+410,El protector solar corresponde a la descripción.,neutro
+411,El chamarra cumple con lo básico.,neutro
+412,El cable USB cumple con lo básico.,neutro
+413,mmm El gel tiene presentación estándar.!!!,neutro
+414,pues El taza corresponde a la descripción. jeje,neutro
+415,El mouse cumple con lo básico.,neutro
+416,El tablet cumple con lo básico.,neutro
+417,El power bank puede usarse para lo indicado.,neutro
+418,El muñeca llegó en condiciones normales.,neutro
+419,El olla corresponde a la descripción.,neutro
+420,El tablet tiene presentación estándar.,neutro
+421,El perfume tiene presentación estándar. en fin,neutro
+422,El tabla para picar funciona de manera regular.,neutro
+423,El juego de mesa tiene presentación estándar.,neutro
+424,El juguete funciona de manera regular.,neutro
+425,El gorra corresponde a la descripción.,neutro
+426,El freidora tiene presentación estándar.,neutro
+427,El licuadora llegó en condiciones normales.,neutro
+428,El zapatos es igual al publicado.,neutro
+429,la verdad El cuchillo funciona de manera regular.,neutro
+430,La compra del licuadora se realizó sin cambios.,neutro
+431,El shampoo tiene presentación estándar.,neutro
+432,"ok, El teclado llegó en condiciones normales. :)",neutro
+433,El rompecabezas puede usarse para lo indicado.,neutro
+434,La compra del plancha de cabello se realizó sin cambios.,neutro
+435,la verdad El gorra tiene presentación estándar.,neutro
+436,El power bank es igual al publicado.,neutro
+437,sinceramente Recibí el chamarra dentro del tiempo estimado. :(,neutro
+438,El molde llegó completo y sin observaciones. :),neutro
+439,El camiseta es igual al publicado. :(,neutro
+440,El blusa llegó completo y sin observaciones.,neutro
+441,El audífonos corresponde a la descripción.,neutro
+442,El carrito tiene presentación estándar. :(,neutro
+443,El power bank tiene presentación estándar.,neutro
+444,El freidora corresponde a la descripción.,neutro
+445,la verdad El short puede usarse para lo indicado.,neutro
+446,La compra del molde se realizó sin cambios.,neutro
+447,El pelota llegó completo y sin observaciones.,neutro
+448,El drone infantil puede usarse para lo indicado.,neutro
+449,El crema cumple con lo básico.!!!,neutro
+450,"ok, El mouse llegó completo y sin observaciones. pero bueno",neutro
+451,"Bien, pero tarde.",mixto
+452,"Funciona, pero llegó golpeado.",mixto
+453,"Me gustó, pero no tanto.",mixto
+454,Bueno aunque caro.,mixto
+455,"Sirve, pero raro.",mixto
+456,Chido pero tardado.,mixto
+457,Bonito pero chico.,mixto
+458,Funciona pero se calienta.,mixto
+459,Cumple pero pudo ser mejor.,mixto
+460,Ok pero incompleto.,mixto
+461,esta padre pero tardo,mixto
+462,funciona bn pero venia golpeado,mixto
+463,me gusto pero llego tarde,mixto
+464,esta bonito aunq venia sucio,mixto
+465,sirve pero no es igual,mixto
+466,buen precio pero mala caja,mixto
+467,llego rapido pero rayado,mixto
+468,cumple pero esperaba mas,mixto
+469,me gusto aunque no al 100,mixto
+470,esta bien pero no perfecto,mixto
+471,"El producto funciona bien, pero llegó con la caja un poco golpeada.",mixto
+472,"Me gustó el diseño, aunque la calidad del material pudo ser mejor.",mixto
+473,"Llegó rápido, pero el color no era exactamente el que pedí.",mixto
+474,"La prenda está bonita, pero la talla viene algo reducida.",mixto
+475,"El cargador funciona, aunque se calienta después de un rato.",mixto
+476,"El juguete le gustó a mi hijo, pero venía sin pilas.",mixto
+477,"La crema huele bien, pero el envase llegó medio abierto.",mixto
+478,"El sartén cocina bien, aunque se raya con facilidad.",mixto
+479,"El producto es bueno, pero el envío tardó más de lo indicado.",mixto
+480,"La app es fácil de usar, pero el seguimiento del pedido falló.",mixto
+481,"Me gustó el artículo, aunque el empaque venía maltratado.",mixto
+482,"La bocina suena bien, pero la batería no dura tanto.",mixto
+483,"Los tenis son cómodos, aunque el color se ve diferente.",mixto
+484,"El producto cumple, pero esperaba mejores acabados.",mixto
+485,"Buen precio, aunque la calidad no es tan alta.",mixto
+486,"El pedido llegó completo, pero un accesorio venía rayado.",mixto
+487,"La mochila es amplia, pero el cierre se siente débil.",mixto
+488,"El artículo funciona, aunque el manual es confuso.",mixto
+489,"La entrega fue puntual, pero el producto venía sucio.",mixto
+490,"Me gustó la compra, pero el vendedor tardó en responder.",mixto
+491,"El producto se ve bien, aunque no parece muy resistente.",mixto
+492,"La camiseta tiene buen diseño, pero la tela es delgada.",mixto
+493,"El reloj es bonito, pero llegó sin pila.",mixto
+494,"El producto funciona correctamente, aunque llegó tarde.",mixto
+495,"La calidad es aceptable, pero el precio me parece elevado.",mixto
+496,"El artículo es útil, aunque el empaque no protegía mucho.",mixto
+497,"La compra fue sencilla, pero el pago tardó en confirmarse.",mixto
+498,"El producto llegó bien, aunque faltó una pieza pequeña.",mixto
+499,"El diseño me encantó, pero el material se siente frágil.",mixto
+500,"Funciona como esperaba, aunque hace más ruido del normal.",mixto
+501,"El envío fue rápido, pero el producto tenía un pequeño rayón.",mixto
+502,"La crema es buena, pero llegó con poca protección.",mixto
+503,"El juguete está bonito, aunque una parte se desprende fácil.",mixto
+504,"La licuadora tiene buena potencia, pero es muy ruidosa.",mixto
+505,"El producto es práctico, pero la instalación fue complicada.",mixto
+506,"Me gustó mucho, aunque llegó con un detalle en la pintura.",mixto
+507,"La calidad es buena, pero el paquete llegó abierto.",mixto
+508,"El artículo sirve, aunque no trae todos los accesorios esperados.",mixto
+509,"El vendedor fue amable, pero el envío se demoró varios días.",mixto
+510,"El producto es bonito, pero no coincide totalmente con la foto.",mixto
+511,"Los audífonos se escuchan bien, aunque el cable parece débil.",mixto
+512,"El pedido llegó completo, pero la caja estaba aplastada.",mixto
+513,"La talla me quedó bien, aunque la tela se siente delgada.",mixto
+514,"El producto cumple su función, pero no se ve muy durable.",mixto
+515,"La app funcionó bien, pero la notificación de entrega llegó tarde.",mixto
+516,"El artículo es bueno, aunque el precio pudo ser menor.",mixto
+517,"Me gustó el producto, pero tardó mucho en llegar.",mixto
+518,"El empaque estaba bonito, aunque el producto tenía polvo.",mixto
+519,"La bocina tiene buen volumen, pero distorsiona un poco.",mixto
+520,"El producto llegó rápido, pero no venía tan protegido.",mixto
+521,"El sartén funciona bien, aunque el mango se siente flojo.",mixto
+522,"La mochila está bonita, pero una costura viene chueca.",mixto
+523,"El artículo es correcto, aunque esperaba mejor presentación.",mixto
+524,"El producto es funcional, pero el color no me convenció.",mixto
+525,"La compra fue buena, aunque la atención tardó en contestar.",mixto
+526,"El reloj se ve elegante, pero la correa es algo rígida.",mixto
+527,"El producto llegó completo, aunque el manual venía doblado.",mixto
+528,"Los tenis son cómodos, pero el pegamento se nota en una orilla.",mixto
+529,"El artículo tiene buena apariencia, pero pesa más de lo esperado.",mixto
+530,"La crema deja buena sensación, aunque el olor es muy fuerte.",mixto
+531,"Funciona bien, pero el botón principal se siente duro.",mixto
+532,"La calidad es decente, aunque no iguala lo que muestran las fotos.",mixto
+533,"El producto sirve para lo básico, pero esperaba más funciones.",mixto
+534,"Me gustó la rapidez del envío, pero el producto tenía un golpe.",mixto
+535,"El artículo llegó en tiempo, aunque el empaque venía abierto.",mixto
+536,"La prenda está bonita, pero se arruga demasiado fácil.",mixto
+537,"El producto es bueno en general, pero la garantía no venía clara.",mixto
+538,"El vendedor contestó, aunque tardó bastante en solucionar la duda.",mixto
+539,"El artículo llegó bien, pero la calidad del accesorio extra es baja.",mixto
+540,"La compra fue fácil, pero el producto no era tan grande como esperaba.",mixto
+541,"El producto funciona, aunque la batería baja más rápido de lo anunciado.",mixto
+542,"Me gustó el precio, pero el material no se siente premium.",mixto
+543,"El envío fue correcto, aunque el producto llegó con una marca pequeña.",mixto
+544,"El artículo cumple, pero requiere más cuidado del que imaginaba.",mixto
+545,"El producto me gustó, aunque tuvo detalles que podrían mejorar.",mixto
+546,"El artículo me pareció bueno en general porque funciona y tiene buen diseño, pero el empaque llegó abierto y eso me dejó con duda sobre el manejo del envío.",mixto
+547,"La experiencia de compra fue sencilla y el producto cumple su función, aunque esperaba una mejor calidad en los materiales y una entrega más cuidada.",mixto
+548,"Me agradó el producto porque es útil para el día a día, pero la publicación debería explicar mejor el tamaño real y los accesorios incluidos.",mixto
+549,"El pedido llegó dentro del tiempo marcado y sí corresponde a lo comprado, pero la caja venía maltratada y el producto tenía una marca pequeña.",mixto
+550,"La calidad es aceptable para el precio y funciona bien, aunque después de usarlo noté que algunos acabados podrían mejorar.",mixto
+551,"pues Me gustó el precio del blusa, pero el material no tanto. :(",mixto
+552,"Me gustó el precio del mouse, pero el material no tanto.",mixto
+553,"El rasuradora funciona, pero la batería dura poco.",mixto
+554,"El pantalón es útil, aunque venía incompleto.",mixto
+555,"pues El mouse está bonito, pero se siente frágil. :(",mixto
+556,"ok, Me gustó el precio del gel, pero el material no tanto. :(",mixto
+557,"Me gustó el precio del figura, pero el material no tanto. jeje",mixto
+558,"la verdad El zapatos funciona, pero la batería dura poco.",mixto
+559,"El freidora cumple, aunque esperaba mejor calidad. pero bueno",mixto
+560,"ok, Me gustó el precio del gorra, pero el material no tanto. pero bueno",mixto
+561,"Me gustó el precio del muñeca, pero el material no tanto.",mixto
+562,"sinceramente Me gustó el tenis, aunque tardó en llegar. :(",mixto
+563,"El jabón sirve, pero no es igual a la foto.",mixto
+564,"ok, El zapatos llegó rápido, pero tenía un rayón. en fin",mixto
+565,"El rasuradora funciona bien, pero llegó golpeado.",mixto
+566,"El chamarra funciona bien, pero llegó golpeado.",mixto
+567,"Me gustó el precio del crema, pero el material no tanto.",mixto
+568,"El cable USB es útil, aunque venía incompleto.",mixto
+569,"la verdad Me gustó el precio del power bank, pero el material no tanto.!!!",mixto
+570,"El cuchillo funciona bien, pero llegó golpeado.",mixto
+571,"Me gustó el juego de mesa, aunque tardó en llegar.",mixto
+572,"El licuadora está bonito, pero se siente frágil.",mixto
+573,"El peluche cumple, aunque esperaba mejor calidad.",mixto
+574,"Buen juego de mesa, pero el empaque venía abierto.",mixto
+575,"El olla funciona, pero la batería dura poco.",mixto
+576,"El protector solar cumple, aunque esperaba mejor calidad.",mixto
+577,"El gorra es útil, aunque venía incompleto.",mixto
+578,"El taza cumple, aunque esperaba mejor calidad.",mixto
+579,"El figura está bonito, pero se siente frágil.",mixto
+580,"El jabón es útil, aunque venía incompleto.",mixto
+581,"El chamarra llegó rápido, pero tenía un rayón.",mixto
+582,"El pantalón sirve, pero no es igual a la foto.",mixto
+583,"El plancha de cabello llegó rápido, pero tenía un rayón.",mixto
+584,"El pelota sirve, pero no es igual a la foto.",mixto
+585,"sinceramente Me gustó el figura, aunque tardó en llegar.",mixto
+586,"El shampoo sirve, pero no es igual a la foto.",mixto
+587,"El tabla para picar llegó rápido, pero tenía un rayón.",mixto
+588,"El cepillo llegó rápido, pero tenía un rayón.",mixto
+589,"El crema llegó rápido, pero tenía un rayón.",mixto
+590,"El bocina es útil, aunque venía incompleto.",mixto
+591,"El pantalón cumple, aunque esperaba mejor calidad.",mixto
+592,"Me gustó el jabón, aunque tardó en llegar.",mixto
+593,"Me gustó el precio del tenis, pero el material no tanto.",mixto
+594,"El juguete funciona bien, pero llegó golpeado.",mixto
+595,"ok, El drone infantil llegó rápido, pero tenía un rayón.!!!",mixto
+596,"El pelota funciona, pero la batería dura poco.",mixto
+597,"pues El lámpara led funciona, pero la batería dura poco. pero bueno",mixto
+598,"El juego de mesa funciona bien, pero llegó golpeado.",mixto
+599,"El mouse está bonito, pero se siente frágil.",mixto
+600,"El short funciona, pero la batería dura poco.",mixto

@@ -1,147 +1,213 @@
-# Procesamiento de Lenguaje Natural - Proyecto integrador 
+# Procesamiento de Lenguaje Natural - Proyecto integrador
 # Python 3.11 + Miniconda + Visual Studio Code
-# Objetivo: leer comentarios, limpiar texto, tokenizar, clasificar y guardar resultados.
-# nombre del proyecto: Análisis de sentimiento en reseñas de productos de tienda en línea
+# Proyecto: Análisis de sentimiento en reseñas de productos de tienda en línea
+# Corte II: corpus ampliado, preprocesamiento con spaCy, stopwords con NLTK y comparación de modelos
 # Autor: Angel Montoya, Manuel Miranda, Eduardo Taurino
-# Fecha: 2026-05-29
+# Fecha: 2026-07-02
 
-# 1 Importar librerías
-from pathlib import Path # Manejo de rutas de archivos
-import csv # Lectura y escritura de archivos CSV
-import re # Expresiones regulares para limpieza de texto
-import unicodedata # Normalización de texto para quitar acentos
-from collections import Counter # Contar frecuencia de palabras
-import math # Operaciones matemáticas para TF, IDF, TF-IDF y similitud coseno
+from __future__ import annotations
 
-import pandas as pd # Manejo de datos en tablas para el modelo supervisado
-from sklearn.feature_extraction.text import TfidfVectorizer # Representación TF-IDF con scikit-learn
-from sklearn.model_selection import train_test_split # División de datos en entrenamiento y prueba
-from sklearn.naive_bayes import MultinomialNB # Algoritmo Naive Bayes Multinomial
-from sklearn.linear_model import LogisticRegression # Algoritmo de Regresión Logística
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score # Métricas de evaluación
-from sklearn.metrics import classification_report, confusion_matrix # Reporte y matriz de confusión
+from collections import Counter
+from pathlib import Path
+import csv
+import math
+import re
+
+import nltk
+import pandas as pd
+import spacy
+from nltk.corpus import stopwords
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.metrics import f1_score, precision_score, recall_score
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.svm import LinearSVC
+
 
 ARCHIVO_ENTRADA = Path("corpus_sentimiento.csv")
-ARCHIVO_SALIDA = Path("resultados_analisis_sentimiento.csv")
+ARCHIVO_SALIDA_REGLAS = Path("resultados_analisis_sentimiento.csv")
 CARPETA_SALIDA = Path("salida")
 CARPETA_SALIDA_MODELO = Path("salida_modelo")
+MODELO_SPACY = "es_core_news_sm"
+ETIQUETAS_ESPERADAS = {"positivo", "negativo", "neutro", "mixto"}
 
-STOPWORDS = {
-    # Artículos y determinantes
-    "el", "la", "los", "las", "un", "una", "unos", "unas",
-    "este", "esta", "estos", "estas", "ese", "esa", "esos", "esas",
-    "mi", "mis", "tu", "tus", "su", "sus",
-
-    # Preposiciones y conectores
-    "a", "ante", "bajo", "con", "contra", "de", "del", "desde", "durante",
-    "en", "entre", "hacia", "hasta", "para", "por", "segun", "sin", "sobre",
-    "tras", "y", "e", "o", "u", "pero", "aunque", "porque", "que", "como",
-    "cuando", "donde", "si", "ni", "mas",
-
-    # Pronombres y palabras frecuentes
-    "me", "te", "se", "lo", "le", "les", "nos", "yo", "tu", "ella", "el",
-    "ellos", "ellas", "esto", "eso", "aquello", "algo", "nada", "todo", "todos",
-    "todas", "algun", "alguna", "ningun", "ninguna",
-
-    # Verbos auxiliares o muy generales
-    "es", "son", "fue", "era", "esta", "estan", "estaba", "estaban", "ser",
-    "estar", "haber", "hay", "ha", "han", "he", "hace", "hacer", "tiene",
-    "tienen", "tenia", "tener", "viene", "llego", "llegar",
-
-    # Intensificadores o expresiones poco informativas por sí solas
-    "muy", "mucho", "mucha", "muchos", "muchas", "mas", "menos", "tan",
-    "tanto", "bastante", "cada", "vez", "veces", "dia", "dias"
-}
 
 PALABRAS_POSITIVAS = {
-    "excelente", "perfecto", "perfecta", "perfectamente", "buena", "buen", "bueno",
-    "buenisima", "buenisimo", "genial", "fantastico", "increible", "maravilla",
-    "encanto", "encantado", "feliz", "contento", "satisfecho", "satisfactoria",
-    "recomiendo", "recomendado", "recomendable", "confiable", "autentico", "original",
-    "premium", "elegante", "resistente", "solido", "robusto", "duradero", "funcional",
-    "practico", "facil", "rapido", "rapidisimo", "puntual", "impecable",
-    "correctamente", "cumple", "supero", "mejor", "calidad", "accesible",
-    "justo", "atento", "servicio", "primera", "protegido", "sellado"
+    "excelente", "perfecto", "perfecta", "bien", "bueno", "buena", "buen", "buenisimo",
+    "buenisima", "genial", "increible", "maravilla", "encantar", "gustar", "feliz",
+    "contento", "satisfecho", "recomendar", "recomendado", "recomendable", "confiable",
+    "original", "premium", "elegante", "resistente", "solido", "robusto", "duradero",
+    "funcional", "practico", "facil", "rapido", "puntual", "impecable", "cumplir",
+    "superar", "mejor", "calidad", "accesible", "justo", "atento", "protegido",
+    "sellado", "chido", "padre", "bonito", "util", "comodo", "seguro", "limpio",
 }
 
 PALABRAS_NEGATIVAS = {
-    "danado", "danada", "aplastada", "malas", "mala", "malo", "malisima", "malisimo",
-    "pesima", "pesimo", "decepcion", "decepcionado", "decepcionante", "terrible",
-    "horrible", "barata", "barato", "fragil", "endeble", "defectuoso", "incompleto",
-    "incompleta", "equivocada", "enganosa", "estafa", "estafado", "peligroso",
-    "inaceptable", "vergonzoso", "grosero", "fallas", "falla", "fallo", "roto",
-    "rompio", "desmorona", "oxido", "rayaduras", "rayado", "manchas", "golpeado",
-    "abierta", "usado", "humedad", "quimicos", "ruido", "pixelada", "baja",
-    "debil", "corto", "corta", "dificil", "tardo", "nunca", "devolver",
-    "devolucion", "faltaban", "faltaron", "error", "no", "nada", "sin", "peor"
+    "dañado", "dañada", "danado", "danada", "aplastado", "aplastada", "mala", "malo",
+    "malisimo", "malisima", "pesimo", "pesima", "decepcion", "decepcionado",
+    "decepcionante", "terrible", "horrible", "barato", "barata", "fragil", "endeble",
+    "defectuoso", "incompleto", "incompleta", "equivocado", "equivocada", "engaño",
+    "enganosa", "estafa", "peligroso", "inaceptable", "vergonzoso", "grosero",
+    "falla", "fallas", "fallo", "fallar", "roto", "rota", "romper", "rompio",
+    "rayado", "rayada", "rayadura", "mancha", "manchado", "golpeado", "abierto",
+    "abierta", "usado", "humedad", "ruido", "baja", "debil", "dificil", "tardar",
+    "tarde", "nunca", "devolver", "devolucion", "faltar", "faltaban", "error",
+    "peor", "sucio", "caducado", "caducada", "cobrar", "doble", "maltratado",
 }
 
 PALABRAS_NEUTRAS = {
     "producto", "articulo", "pedido", "paquete", "caja", "empaque", "embalaje",
     "vendedor", "compra", "entrega", "envio", "precio", "calidad", "material",
-    "color", "talla", "tamano", "foto", "fotos", "imagen", "imagenes", "descripcion",
-    "ficha", "pagina", "anuncio", "caracteristicas", "especificaciones",
-    "funcion", "funciona", "uso", "diario", "basico", "basica", "normal",
-    "estandar", "promedio", "simple", "sencillo", "sencilla", "correcto", "correcta",
-    "adecuado", "adecuada", "aceptable", "condiciones", "fecha", "tiempo",
-    "rango", "proceso", "categoria", "mercado", "observaciones", "comentarios"
+    "color", "talla", "tamano", "foto", "imagen", "descripcion", "ficha", "pagina",
+    "anuncio", "caracteristica", "especificacion", "funcion", "uso", "diario", "basico",
+    "basica", "normal", "estandar", "promedio", "simple", "sencillo", "sencilla",
+    "correcto", "correcta", "adecuado", "adecuada", "aceptable", "condicion", "fecha",
+    "tiempo", "rango", "proceso", "categoria", "observacion", "comentario", "recibido",
+}
+
+CONECTORES_MIXTOS = {
+    "pero", "aunque", "sin embargo", "aun así", "aun asi", "no obstante", "por otro lado"
 }
 
 
-# 2 Definir funciones para cada etapa del pipeline de análisis de sentimiento
+# -----------------------------------------------------------------------------
+# 1. Carga y validación de recursos
+# -----------------------------------------------------------------------------
 
-# 2.1 Cargar comentarios desde el archivo CSV
-def cargar_comentarios(ruta: Path) -> list[dict[str, str]]:
-    """Lee el archivo CSV del proyecto y devuelve una lista de comentarios."""
+def cargar_modelo_spacy() -> spacy.language.Language:
+    """Carga el modelo de spaCy para español y muestra una instrucción clara si falta."""
+    try:
+        return spacy.load(MODELO_SPACY)
+    except OSError as exc:
+        raise RuntimeError(
+            f"No se encontró el modelo de spaCy '{MODELO_SPACY}'.\n"
+            f"Instálalo con este comando:\n"
+            f"python -m spacy download {MODELO_SPACY}"
+        ) from exc
+
+
+def cargar_stopwords_espanol(nlp: spacy.language.Language) -> set[str]:
+    """Carga stopwords en español desde NLTK y las combina con las de spaCy."""
+    try:
+        stopwords_nltk = set(stopwords.words("spanish"))
+    except LookupError:
+        nltk.download("stopwords")
+        stopwords_nltk = set(stopwords.words("spanish"))
+
+    stopwords_spacy = set(nlp.Defaults.stop_words)
+
+    # Nota técnica:
+    # No se agregan como stopwords palabras del dominio como producto, pedido,
+    # paquete, compra o app, porque en comentarios cortos pueden aportar contexto.
+    # Ejemplos: "producto malo", "pedido tarde", "app falló", "paquete abierto".
+    return stopwords_nltk.union(stopwords_spacy)
+
+
+def cargar_corpus(ruta: Path) -> pd.DataFrame:
+    """Lee el corpus en CSV y valida columnas obligatorias, datos vacíos y etiquetas."""
     if not ruta.exists():
-        raise FileNotFoundError(f"No existe el archivo de entrada: {ruta}")
+        raise FileNotFoundError(f"No existe el archivo de entrada: {ruta.resolve()}")
 
-    comentarios = []
+    datos = pd.read_csv(ruta, encoding="utf-8-sig")
+    columnas_obligatorias = {"id", "texto", "etiqueta"}
+    columnas_actuales = set(datos.columns)
+    columnas_faltantes = columnas_obligatorias - columnas_actuales
 
-    with ruta.open("r", encoding="utf-8-sig", newline="") as archivo:
-        lector = csv.DictReader(archivo)
+    if columnas_faltantes:
+        faltantes = ", ".join(sorted(columnas_faltantes))
+        raise ValueError(f"El CSV no contiene las columnas obligatorias: {faltantes}")
 
-        for fila in lector:
-            comentarios.append({
-                "id": fila.get("id", "").strip(),
-                "texto": fila.get("texto", "").strip(),
-                "etiqueta_original": fila.get("etiqueta", "").strip().lower(),
-            })
+    datos = datos[["id", "texto", "etiqueta"]].copy()
+    datos["texto"] = datos["texto"].astype(str).str.strip()
+    datos["etiqueta"] = datos["etiqueta"].astype(str).str.strip().str.lower()
+    datos = datos.dropna(subset=["id", "texto", "etiqueta"])
+    datos = datos[datos["texto"] != ""]
 
-    return [comentario for comentario in comentarios if comentario["texto"]]
+    etiquetas_encontradas = set(datos["etiqueta"].unique())
+    etiquetas_no_validas = etiquetas_encontradas - ETIQUETAS_ESPERADAS
+    if etiquetas_no_validas:
+        no_validas = ", ".join(sorted(etiquetas_no_validas))
+        raise ValueError(f"El corpus contiene etiquetas no válidas: {no_validas}")
 
-# 2.2 Limpiar el texto de cada comentario
-def quitar_acentos(texto: str) -> str:
-    normalizado = unicodedata.normalize("NFD", texto)
-    return "".join(c for c in normalizado if unicodedata.category(c) != "Mn")
+    return datos
 
-# Eliminar acentos, convertir a minúsculas, eliminar signos de puntuación y espacios extra
-def limpiar_texto(texto: str) -> str:
-    """Normaliza el texto: minúsculas, sin acentos, sin signos y sin espacios extra."""
-    texto = texto.lower()
-    texto = quitar_acentos(texto)
-    texto = re.sub(r"[^a-zñ0-9\s]", " ", texto)
+
+# -----------------------------------------------------------------------------
+# 2. Preprocesamiento con spaCy y NLTK
+# -----------------------------------------------------------------------------
+
+def limpieza_basica(texto: str) -> str:
+    """Realiza limpieza inicial antes de enviar el texto a spaCy."""
+    texto = str(texto).lower()
+    texto = re.sub(r"https?://\S+|www\.\S+", " ", texto)
+    texto = re.sub(r"[@#]\w+", " ", texto)
+    texto = re.sub(r"[^a-záéíóúüñ0-9\s]", " ", texto)
     texto = re.sub(r"\s+", " ", texto).strip()
     return texto
 
-# 2.3 Tokenizar el texto limpio en palabras individuales
-def tokenizar(texto_limpio: str) -> list[str]:
-    """Divide el texto limpio en palabras individuales."""
-    return texto_limpio.split()
 
-# 2.4 Eliminar palabras vacías y tokens muy cortos para conservar términos útiles
-def quitar_stopwords(tokens: list[str]) -> list[str]:
-    """Elimina palabras vacías y tokens muy cortos para conservar términos útiles."""
-    return [token for token in tokens if token not in STOPWORDS and len(token) > 2]
+def procesar_texto_spacy(texto: str, nlp: spacy.language.Language, stopwords_es: set[str]) -> tuple[str, list[str]]:
+    """Procesa un comentario con spaCy: tokeniza, elimina ruido, stopwords y lematiza."""
+    texto_limpio = limpieza_basica(texto)
+    documento = nlp(texto_limpio)
+    tokens_utiles = []
 
-# 2.5 Clasificar el sentimiento del comentario basado en la presencia de palabras positivas, negativas y neutras
-def clasificar_sentimiento(tokens: list[str]) -> str:
-    """Clasifica el sentimiento con base en palabras positivas y negativas."""
+    for token in documento:
+        lema = token.lemma_.lower().strip()
+
+        if token.is_space or token.is_punct:
+            continue
+        if token.like_num:
+            continue
+        if token.is_stop or lema in stopwords_es or token.text.lower() in stopwords_es:
+            continue
+        if len(lema) <= 2:
+            continue
+        if not re.match(r"^[a-záéíóúüñ]+$", lema):
+            continue
+
+        tokens_utiles.append(lema)
+
+    return " ".join(tokens_utiles), tokens_utiles
+
+
+def preprocesar_corpus(datos: pd.DataFrame, nlp: spacy.language.Language, stopwords_es: set[str]) -> pd.DataFrame:
+    """Agrega texto procesado y tokens útiles al corpus original."""
+    textos_procesados = []
+    tokens_por_comentario = []
+
+    for texto in datos["texto"]:
+        texto_procesado, tokens = procesar_texto_spacy(texto, nlp, stopwords_es)
+        textos_procesados.append(texto_procesado)
+        tokens_por_comentario.append(tokens)
+
+    datos_procesados = datos.copy()
+    datos_procesados["texto_procesado"] = textos_procesados
+    datos_procesados["tokens_utiles"] = tokens_por_comentario
+    datos_procesados["tokens_utiles_texto"] = datos_procesados["tokens_utiles"].apply(lambda tokens: ", ".join(tokens))
+    datos_procesados["palabras_frecuentes"] = datos_procesados["tokens_utiles"].apply(
+        lambda tokens: ", ".join([f"{palabra}:{conteo}" for palabra, conteo in Counter(tokens).most_common(5)])
+    )
+
+    return datos_procesados
+
+
+# -----------------------------------------------------------------------------
+# 3. Clasificación por reglas como línea base
+# -----------------------------------------------------------------------------
+
+def clasificar_sentimiento_reglas(tokens: list[str], texto_original: str) -> str:
+    """Clasifica sentimiento mediante reglas simples; funciona solo como línea base."""
+    texto_normalizado = limpieza_basica(texto_original)
     positivos = sum(1 for token in tokens if token in PALABRAS_POSITIVAS)
     negativos = sum(1 for token in tokens if token in PALABRAS_NEGATIVAS)
     neutros = sum(1 for token in tokens if token in PALABRAS_NEUTRAS)
+    tiene_conector_mixto = any(conector in texto_normalizado for conector in CONECTORES_MIXTOS)
 
-    if positivos > 0 and negativos > 0:
+    if (positivos > 0 and negativos > 0) or (tiene_conector_mixto and (positivos > 0 or negativos > 0)):
         return "mixto"
     if positivos > negativos:
         return "positivo"
@@ -151,99 +217,49 @@ def clasificar_sentimiento(tokens: list[str]) -> str:
         return "neutro"
     return "neutro"
 
-# 2.6 Evaluar la clasificación comparando el sentimiento calculado con la etiqueta original del dataset
-def evaluar_clasificacion(etiqueta_original: str, sentimiento_calculado: str) -> str:
-    """Compara la etiqueta original del dataset con el sentimiento calculado."""
-    if etiqueta_original == sentimiento_calculado:
-        return "correcto"
-    return "revisar"
 
-# 2.7 Procesar cada comentario del proyecto y generar los resultados del análisis
-def analizar_comentarios(comentarios: list[dict[str, str]]) -> list[dict[str, str]]:
-    """Procesa cada comentario del proyecto y genera los resultados del análisis."""
-    resultados = []
+def generar_linea_base_reglas(datos: pd.DataFrame) -> pd.DataFrame:
+    """Genera la evaluación exploratoria del clasificador basado en reglas."""
+    resultados = datos.copy()
+    resultados["sentimiento_reglas"] = resultados.apply(
+        lambda fila: clasificar_sentimiento_reglas(fila["tokens_utiles"], fila["texto"]),
+        axis=1,
+    )
+    resultados["evaluacion_reglas"] = resultados.apply(
+        lambda fila: "correcto" if fila["etiqueta"] == fila["sentimiento_reglas"] else "revisar",
+        axis=1,
+    )
 
-    for comentario in comentarios:
-        texto_original = comentario["texto"]
-        texto_limpio = limpiar_texto(texto_original)
-        tokens = tokenizar(texto_limpio)
-        tokens_utiles = quitar_stopwords(tokens)
-        frecuencia = Counter(tokens_utiles)
-        sentimiento = clasificar_sentimiento(tokens_utiles)
-        evaluacion = evaluar_clasificacion(comentario["etiqueta_original"], sentimiento)
-
-        resultados.append({
-            "id": comentario["id"],
-            "comentario_original": texto_original,
-            "etiqueta_original": comentario["etiqueta_original"],
-            "texto_limpio": texto_limpio,
-            "tokens_utiles": ", ".join(tokens_utiles),
-            "palabras_frecuentes": ", ".join([f"{palabra}:{conteo}" for palabra, conteo in frecuencia.most_common(5)]),
-            "sentimiento_calculado": sentimiento,
-            "evaluacion": evaluacion,
-        })
-
-    return resultados
-
-# 2.8 Guardar los resultados del análisis en un nuevo archivo CSV y mostrar un resumen de los resultados en consola
-def guardar_resultados(resultados: list[dict[str, str]], ruta: Path) -> None:
-    """Guarda los resultados del análisis en un archivo CSV."""
-    campos = [
-        "id",
-        "comentario_original",
-        "etiqueta_original",
-        "texto_limpio",
-        "tokens_utiles",
-        "palabras_frecuentes",
-        "sentimiento_calculado",
-        "evaluacion",
-    ]
-
-    with ruta.open("w", encoding="utf-8-sig", newline="") as archivo:
-        escritor = csv.DictWriter(archivo, fieldnames=campos)
-        escritor.writeheader()
-        escritor.writerows(resultados)
+    return resultados[[
+        "id", "texto", "etiqueta", "texto_procesado", "tokens_utiles_texto",
+        "palabras_frecuentes", "sentimiento_reglas", "evaluacion_reglas"
+    ]].rename(columns={
+        "texto": "comentario_original",
+        "etiqueta": "etiqueta_original",
+        "tokens_utiles_texto": "tokens_utiles",
+    })
 
 
-# 2.9 Generar archivos de representación numérica: preprocesamiento, BoW, TF, TF-IDF y similitud
-
-def obtener_tokens_desde_resultado(fila: dict[str, str]) -> list[str]:
-    """Convierte la columna de tokens útiles en una lista de tokens."""
-    tokens = fila.get("tokens_utiles", "")
-    if not tokens:
-        return []
-    return [token.strip() for token in tokens.split(",") if token.strip()]
+def guardar_linea_base_reglas(resultados_reglas: pd.DataFrame, ruta: Path) -> None:
+    """Guarda el análisis por reglas en CSV."""
+    resultados_reglas.to_csv(ruta, index=False, encoding="utf-8-sig", quoting=csv.QUOTE_ALL)
 
 
-def construir_vocabulario(resultados: list[dict[str, str]]) -> list[str]:
-    """Construye un vocabulario ordenado a partir de los tokens útiles."""
-    vocabulario = set()
+# -----------------------------------------------------------------------------
+# 4. Representación numérica del corpus
+# -----------------------------------------------------------------------------
 
-    for fila in resultados:
-        vocabulario.update(obtener_tokens_desde_resultado(fila))
-
-    return sorted(vocabulario)
-
-
-def calcular_bow(tokens: list[str], vocabulario: list[str]) -> dict[str, int]:
-    """Calcula la representación Bag of Words para un documento."""
+def calcular_tf_manual(tokens: list[str], vocabulario: list[str]) -> dict[str, float]:
+    """Calcula frecuencia de término para un documento."""
     frecuencia = Counter(tokens)
-    return {termino: frecuencia.get(termino, 0) for termino in vocabulario}
-
-
-def calcular_tf(tokens: list[str], vocabulario: list[str]) -> dict[str, float]:
-    """Calcula la frecuencia de término normalizada para un documento."""
-    frecuencia = Counter(tokens)
-    total_tokens = len(tokens)
-
-    if total_tokens == 0:
+    total = len(tokens)
+    if total == 0:
         return {termino: 0.0 for termino in vocabulario}
+    return {termino: frecuencia.get(termino, 0) / total for termino in vocabulario}
 
-    return {termino: frecuencia.get(termino, 0) / total_tokens for termino in vocabulario}
 
-
-def calcular_idf(documentos_tokens: list[list[str]], vocabulario: list[str]) -> dict[str, float]:
-    """Calcula el IDF suavizado para cada término del vocabulario."""
+def calcular_idf_manual(documentos_tokens: list[list[str]], vocabulario: list[str]) -> dict[str, float]:
+    """Calcula IDF suavizado para el vocabulario completo."""
     total_documentos = len(documentos_tokens)
     idf = {}
 
@@ -254,179 +270,151 @@ def calcular_idf(documentos_tokens: list[list[str]], vocabulario: list[str]) -> 
     return idf
 
 
-def calcular_tfidf(tf: dict[str, float], idf: dict[str, float], vocabulario: list[str]) -> dict[str, float]:
-    """Calcula la representación TF-IDF para un documento."""
-    return {termino: tf[termino] * idf[termino] for termino in vocabulario}
-
-
 def similitud_coseno(vector_a: dict[str, float], vector_b: dict[str, float], vocabulario: list[str]) -> float:
-    """Calcula la similitud coseno entre dos documentos representados con TF-IDF."""
+    """Calcula similitud coseno entre dos vectores TF-IDF."""
     producto_punto = sum(vector_a[termino] * vector_b[termino] for termino in vocabulario)
     norma_a = math.sqrt(sum(vector_a[termino] ** 2 for termino in vocabulario))
     norma_b = math.sqrt(sum(vector_b[termino] ** 2 for termino in vocabulario))
 
     if norma_a == 0 or norma_b == 0:
         return 0.0
-
     return producto_punto / (norma_a * norma_b)
 
 
-def guardar_csv_generico(ruta: Path, campos: list[str], filas: list[dict[str, str | int | float]]) -> None:
-    """Guarda cualquier lista de diccionarios en un archivo CSV."""
-    with ruta.open("w", encoding="utf-8-sig", newline="") as archivo:
-        escritor = csv.DictWriter(archivo, fieldnames=campos)
-        escritor.writeheader()
-        escritor.writerows(filas)
-
-
-def generar_archivos_representacion(resultados: list[dict[str, str]], carpeta_salida: Path) -> None:
-    """Genera los archivos de salida para representar numéricamente el corpus."""
+def generar_archivos_representacion(datos: pd.DataFrame, carpeta_salida: Path) -> None:
+    """Genera preprocesamiento, BoW, TF, TF-IDF, términos principales y similitud coseno."""
     carpeta_salida.mkdir(exist_ok=True)
 
-    documentos_tokens = [obtener_tokens_desde_resultado(fila) for fila in resultados]
-    vocabulario = construir_vocabulario(resultados)
-    idf = calcular_idf(documentos_tokens, vocabulario)
+    datos[["id", "texto", "etiqueta", "texto_procesado", "tokens_utiles_texto"]].rename(columns={
+        "texto": "texto_original",
+        "etiqueta": "etiqueta_original",
+        "tokens_utiles_texto": "tokens_utiles",
+    }).to_csv(carpeta_salida / "01_preprocesamiento.csv", index=False, encoding="utf-8-sig", quoting=csv.QUOTE_ALL)
 
-    filas_preprocesamiento = []
-    filas_bow = []
+    vectorizador_bow = CountVectorizer()
+    matriz_bow = vectorizador_bow.fit_transform(datos["texto_procesado"])
+    vocabulario_bow = vectorizador_bow.get_feature_names_out()
+    bow_df = pd.DataFrame(matriz_bow.toarray(), columns=vocabulario_bow)
+    bow_df.insert(0, "etiqueta_original", datos["etiqueta"].values)
+    bow_df.insert(0, "id", datos["id"].values)
+    bow_df.to_csv(carpeta_salida / "02_matriz_bow.csv", index=False, encoding="utf-8-sig")
+
+    documentos_tokens = datos["tokens_utiles"].tolist()
+    vocabulario = sorted({token for tokens in documentos_tokens for token in tokens})
+    idf = calcular_idf_manual(documentos_tokens, vocabulario)
+
     filas_tf = []
     filas_tfidf = []
     filas_top_tfidf = []
     vectores_tfidf = []
 
-    for indice, fila in enumerate(resultados):
-        tokens = documentos_tokens[indice]
-        bow = calcular_bow(tokens, vocabulario)
-        tf = calcular_tf(tokens, vocabulario)
-        tfidf = calcular_tfidf(tf, idf, vocabulario)
+    for _, fila in datos.iterrows():
+        tokens = fila["tokens_utiles"]
+        tf = calcular_tf_manual(tokens, vocabulario)
+        tfidf = {termino: tf[termino] * idf[termino] for termino in vocabulario}
         vectores_tfidf.append(tfidf)
-
-        filas_preprocesamiento.append({
-            "id": fila["id"],
-            "texto_original": fila["comentario_original"],
-            "etiqueta_original": fila["etiqueta_original"],
-            "texto_limpio": fila["texto_limpio"],
-            "tokens_utiles": fila["tokens_utiles"],
-        })
-
-        filas_bow.append({
-            "id": fila["id"],
-            "etiqueta_original": fila["etiqueta_original"],
-            **bow,
-        })
 
         filas_tf.append({
             "id": fila["id"],
-            "etiqueta_original": fila["etiqueta_original"],
+            "etiqueta_original": fila["etiqueta"],
             **{termino: round(valor, 6) for termino, valor in tf.items()},
         })
-
         filas_tfidf.append({
             "id": fila["id"],
-            "etiqueta_original": fila["etiqueta_original"],
+            "etiqueta_original": fila["etiqueta"],
             **{termino: round(valor, 6) for termino, valor in tfidf.items()},
         })
 
         top_terminos = sorted(tfidf.items(), key=lambda item: item[1], reverse=True)[:5]
         filas_top_tfidf.append({
             "id": fila["id"],
-            "etiqueta_original": fila["etiqueta_original"],
-            "texto_original": fila["comentario_original"],
+            "etiqueta_original": fila["etiqueta"],
+            "texto_original": fila["texto"],
             "top_terminos_tfidf": ", ".join([f"{termino}:{valor:.4f}" for termino, valor in top_terminos if valor > 0]),
         })
 
+    pd.DataFrame(filas_tf).to_csv(carpeta_salida / "03_matriz_tf.csv", index=False, encoding="utf-8-sig")
+    pd.DataFrame(filas_tfidf).to_csv(carpeta_salida / "04_matriz_tfidf.csv", index=False, encoding="utf-8-sig")
+    pd.DataFrame(filas_top_tfidf).to_csv(carpeta_salida / "05_top_terminos_tfidf.csv", index=False, encoding="utf-8-sig", quoting=csv.QUOTE_ALL)
+
     similitudes = []
-    total_documentos = len(resultados)
+    total_documentos = len(datos)
+    ids = datos["id"].tolist()
+    etiquetas = datos["etiqueta"].tolist()
 
     for i in range(total_documentos):
         for j in range(i + 1, total_documentos):
             similitud = similitud_coseno(vectores_tfidf[i], vectores_tfidf[j], vocabulario)
             similitudes.append({
-                "id_documento_1": resultados[i]["id"],
-                "etiqueta_documento_1": resultados[i]["etiqueta_original"],
-                "id_documento_2": resultados[j]["id"],
-                "etiqueta_documento_2": resultados[j]["etiqueta_original"],
+                "id_documento_1": ids[i],
+                "etiqueta_documento_1": etiquetas[i],
+                "id_documento_2": ids[j],
+                "etiqueta_documento_2": etiquetas[j],
                 "similitud_coseno": round(similitud, 6),
             })
 
-    similitudes_ordenadas = sorted(similitudes, key=lambda fila: fila["similitud_coseno"], reverse=True)[:50]
-
-    guardar_csv_generico(
-        carpeta_salida / "01_preprocesamiento.csv",
-        ["id", "texto_original", "etiqueta_original", "texto_limpio", "tokens_utiles"],
-        filas_preprocesamiento,
-    )
-    guardar_csv_generico(
-        carpeta_salida / "02_matriz_bow.csv",
-        ["id", "etiqueta_original", *vocabulario],
-        filas_bow,
-    )
-    guardar_csv_generico(
-        carpeta_salida / "03_matriz_tf.csv",
-        ["id", "etiqueta_original", *vocabulario],
-        filas_tf,
-    )
-    guardar_csv_generico(
-        carpeta_salida / "04_matriz_tfidf.csv",
-        ["id", "etiqueta_original", *vocabulario],
-        filas_tfidf,
-    )
-    guardar_csv_generico(
-        carpeta_salida / "05_top_terminos_tfidf.csv",
-        ["id", "etiqueta_original", "texto_original", "top_terminos_tfidf"],
-        filas_top_tfidf,
-    )
-    guardar_csv_generico(
-        carpeta_salida / "06_similitud_documentos.csv",
-        ["id_documento_1", "etiqueta_documento_1", "id_documento_2", "etiqueta_documento_2", "similitud_coseno"],
-        similitudes_ordenadas,
-    )
+    similitudes_df = pd.DataFrame(similitudes).sort_values("similitud_coseno", ascending=False).head(50)
+    similitudes_df.to_csv(carpeta_salida / "06_similitud_documentos.csv", index=False, encoding="utf-8-sig")
 
     print("\nREPRESENTACIÓN NUMÉRICA DEL CORPUS")
-    print("-" * 50)
-    print(f"Documentos procesados: {len(resultados)}")
-    print(f"Tamaño del vocabulario: {len(vocabulario)}")
+    print("-" * 60)
+    print(f"Documentos procesados: {len(datos)}")
+    print(f"Tamaño del vocabulario manual: {len(vocabulario)}")
     print(f"Archivos generados en: {carpeta_salida.resolve()}")
-    print("\nTop 5 similitudes:")
-    for fila in similitudes_ordenadas[:5]:
-        print(
-            f"- Documento {fila['id_documento_1']} y documento {fila['id_documento_2']}: "
-            f"{fila['similitud_coseno']:.4f}"
-        )
 
-# 2.10 Entrenar y evaluar modelos supervisados de Machine Learning
 
-def entrenar_y_evaluar_modelos(comentarios: list[dict[str, str]], carpeta_salida_modelo: Path) -> None:
-    """Entrena modelos supervisados para clasificar sentimiento y guarda archivos de evaluación."""
+# -----------------------------------------------------------------------------
+# 5. Entrenamiento y evaluación de modelos supervisados
+# -----------------------------------------------------------------------------
+
+def construir_modelos() -> dict[str, object]:
+    """Define los cuatro modelos supervisados comparados en el Corte II."""
+    return {
+        "MultinomialNB": MultinomialNB(),
+        "LogisticRegression": LogisticRegression(max_iter=2000, random_state=42),
+        "LinearSVC": LinearSVC(random_state=42),
+        "RandomForest": RandomForestClassifier(n_estimators=300, random_state=42, class_weight="balanced"),
+    }
+
+
+def entrenar_y_evaluar_modelos(datos: pd.DataFrame, carpeta_salida_modelo: Path) -> None:
+    """Entrena cuatro modelos, compara métricas y guarda resultados del mejor modelo."""
     carpeta_salida_modelo.mkdir(exist_ok=True)
 
-    datos = pd.DataFrame(comentarios)
-    datos = datos.rename(columns={"texto": "texto_original"})
-    datos["texto_limpio"] = datos["texto_original"].apply(limpiar_texto)
+    datos_modelo = datos[["id", "texto", "etiqueta", "texto_procesado"]].copy()
+    datos_modelo = datos_modelo.rename(columns={
+        "texto": "texto_original",
+        "etiqueta": "etiqueta_original",
+    })
+    datos_modelo.to_csv(
+        carpeta_salida_modelo / "01_datos_preprocesados_spacy.csv",
+        index=False,
+        encoding="utf-8-sig",
+        quoting=csv.QUOTE_ALL,
+    )
 
-    datos_preprocesados = datos[["id", "texto_original", "etiqueta_original", "texto_limpio"]]
-    datos_preprocesados.to_csv(carpeta_salida_modelo / "01_datos_preprocesados.csv", index=False, encoding="utf-8-sig")
+    x = datos["texto_procesado"]
+    y = datos["etiqueta"]
 
-    x = datos["texto_limpio"]
-    y = datos["etiqueta_original"]
-
-    x_entrenamiento, x_prueba, y_entrenamiento, y_prueba = train_test_split(
+    x_entrenamiento, x_prueba, y_entrenamiento, y_prueba, indices_entrenamiento, indices_prueba = train_test_split(
         x,
         y,
+        datos.index,
         test_size=0.30,
         random_state=42,
         stratify=y,
     )
 
-    vectorizador = TfidfVectorizer()
+    vectorizador = TfidfVectorizer(
+        ngram_range=(1, 2),
+        min_df=1,
+        sublinear_tf=True,
+        strip_accents="unicode",
+    )
     x_entrenamiento_tfidf = vectorizador.fit_transform(x_entrenamiento)
     x_prueba_tfidf = vectorizador.transform(x_prueba)
 
-    modelos = {
-        "MultinomialNB": MultinomialNB(),
-        "LogisticRegression": LogisticRegression(max_iter=1000, random_state=42),
-    }
-
+    modelos = construir_modelos()
     metricas = []
     predicciones_por_modelo = {}
 
@@ -443,26 +431,22 @@ def entrenar_y_evaluar_modelos(comentarios: list[dict[str, str]], carpeta_salida
             "f1_macro": round(f1_score(y_prueba, predicciones, average="macro", zero_division=0), 6),
         })
 
-    metricas_df = pd.DataFrame(metricas)
+    metricas_df = pd.DataFrame(metricas).sort_values("f1_macro", ascending=False)
     metricas_df.to_csv(carpeta_salida_modelo / "02_metricas_modelos.csv", index=False, encoding="utf-8-sig")
 
-    mejor_modelo_nombre = metricas_df.sort_values("f1_macro", ascending=False).iloc[0]["modelo"]
-    mejor_modelo = modelos[mejor_modelo_nombre]
+    mejor_modelo_nombre = metricas_df.iloc[0]["modelo"]
     mejores_predicciones = predicciones_por_modelo[mejor_modelo_nombre]
 
     vocabulario_df = pd.DataFrame({"termino": vectorizador.get_feature_names_out()})
     vocabulario_df.to_csv(carpeta_salida_modelo / "03_vocabulario_tfidf.csv", index=False, encoding="utf-8-sig")
 
-    matriz_tfidf_completa = vectorizador.transform(datos["texto_limpio"])
-    matriz_tfidf_df = pd.DataFrame(
-        matriz_tfidf_completa.toarray(),
-        columns=vectorizador.get_feature_names_out(),
-    )
-    matriz_tfidf_df.insert(0, "etiqueta_original", datos["etiqueta_original"])
-    matriz_tfidf_df.insert(0, "id", datos["id"])
+    matriz_tfidf_completa = vectorizador.transform(datos["texto_procesado"])
+    matriz_tfidf_df = pd.DataFrame(matriz_tfidf_completa.toarray(), columns=vectorizador.get_feature_names_out())
+    matriz_tfidf_df.insert(0, "etiqueta_original", datos["etiqueta"].values)
+    matriz_tfidf_df.insert(0, "id", datos["id"].values)
     matriz_tfidf_df.to_csv(carpeta_salida_modelo / "04_matriz_tfidf.csv", index=False, encoding="utf-8-sig")
 
-    etiquetas_ordenadas = sorted(y.unique())
+    etiquetas_ordenadas = ["mixto", "negativo", "neutro", "positivo"]
     matriz_confusion = confusion_matrix(y_prueba, mejores_predicciones, labels=etiquetas_ordenadas)
     matriz_confusion_df = pd.DataFrame(
         matriz_confusion,
@@ -471,13 +455,21 @@ def entrenar_y_evaluar_modelos(comentarios: list[dict[str, str]], carpeta_salida
     )
     matriz_confusion_df.to_csv(carpeta_salida_modelo / "05_matriz_confusion_mejor_modelo.csv", encoding="utf-8-sig")
 
+    datos_prueba = datos.loc[indices_prueba].copy()
     predicciones_prueba_df = pd.DataFrame({
-        "texto": x_prueba.values,
+        "id": datos_prueba["id"].values,
+        "texto_original": datos_prueba["texto"].values,
+        "texto_procesado": datos_prueba["texto_procesado"].values,
         "etiqueta_real": y_prueba.values,
         "etiqueta_predicha": mejores_predicciones,
         "modelo": mejor_modelo_nombre,
     })
-    predicciones_prueba_df.to_csv(carpeta_salida_modelo / "06_predicciones_prueba.csv", index=False, encoding="utf-8-sig")
+    predicciones_prueba_df.to_csv(
+        carpeta_salida_modelo / "06_predicciones_prueba.csv",
+        index=False,
+        encoding="utf-8-sig",
+        quoting=csv.QUOTE_ALL,
+    )
 
     reporte = classification_report(
         y_prueba,
@@ -489,70 +481,96 @@ def entrenar_y_evaluar_modelos(comentarios: list[dict[str, str]], carpeta_salida
     reporte_df = pd.DataFrame(reporte).transpose()
     reporte_df.to_csv(carpeta_salida_modelo / "07_reporte_clasificacion_mejor_modelo.csv", encoding="utf-8-sig")
 
-    print("\nMODELO SUPERVISADO DE MACHINE LEARNING")
-    print("-" * 50)
-    print(f"Modelo seleccionado: {mejor_modelo_nombre}")
-    print("\nMétricas principales:")
-    mejor_fila = metricas_df[metricas_df["modelo"] == mejor_modelo_nombre].iloc[0]
+    errores_df = predicciones_prueba_df[
+        predicciones_prueba_df["etiqueta_real"] != predicciones_prueba_df["etiqueta_predicha"]
+    ].copy()
+    errores_df.to_csv(
+        carpeta_salida_modelo / "08_errores_modelo.csv",
+        index=False,
+        encoding="utf-8-sig",
+        quoting=csv.QUOTE_ALL,
+    )
+
+    print("\nMODELOS SUPERVISADOS DE MACHINE LEARNING")
+    print("-" * 60)
+    print(metricas_df.to_string(index=False))
+    mejor_fila = metricas_df.iloc[0]
+    print("\nMejor modelo seleccionado por F1 macro:")
+    print(f"- Modelo          : {mejor_modelo_nombre}")
     print(f"- Accuracy        : {mejor_fila['accuracy']:.4f}")
     print(f"- Precision macro : {mejor_fila['precision_macro']:.4f}")
     print(f"- Recall macro    : {mejor_fila['recall_macro']:.4f}")
     print(f"- F1 macro        : {mejor_fila['f1_macro']:.4f}")
-    print(f"\nArchivos generados en: {carpeta_salida_modelo.resolve()}")
+    print(f"- Errores en prueba: {len(errores_df)}")
+    print(f"Archivos generados en: {carpeta_salida_modelo.resolve()}")
 
-# 2.11 Funciones para imprimir resultados y resumen en consola
-def imprimir_resultados(resultados: list[dict[str, str]]) -> None:
-    """Muestra en consola los resultados principales del análisis."""
-    for fila in resultados:
-        print("=" * 100)
-        print(f"ID                  : {fila['id']}")
-        print(f"Comentario original : {fila['comentario_original']}")
-        print(f"Etiqueta original   : {fila['etiqueta_original']}")
-        print(f"Texto limpio        : {fila['texto_limpio']}")
-        print(f"Tokens útiles       : {fila['tokens_utiles']}")
-        print(f"Sentimiento calculado: {fila['sentimiento_calculado']}")
-        print(f"Evaluación          : {fila['evaluacion']}")
-    print("=" * 100)
 
-# 2.12 Resumen general de etiquetas, sentimientos y aciertos
-def imprimir_resumen(resultados: list[dict[str, str]]) -> None:
-    """Imprime un resumen general de etiquetas, sentimientos y aciertos."""
-    total = len(resultados)
-    correctos = sum(1 for fila in resultados if fila["evaluacion"] == "correcto")
+# -----------------------------------------------------------------------------
+# 6. Resúmenes en consola
+# -----------------------------------------------------------------------------
+
+def imprimir_resumen_corpus(datos: pd.DataFrame) -> None:
+    """Muestra un resumen breve del corpus cargado."""
+    print("\nRESUMEN DEL CORPUS")
+    print("-" * 60)
+    print(f"Archivo de entrada: {ARCHIVO_ENTRADA.resolve()}")
+    print(f"Total de comentarios: {len(datos)}")
+    print("Distribución de etiquetas:")
+    for etiqueta, cantidad in datos["etiqueta"].value_counts().sort_index().items():
+        print(f"- {etiqueta}: {cantidad}")
+
+
+def imprimir_resumen_reglas(resultados_reglas: pd.DataFrame) -> None:
+    """Muestra el resumen de la línea base por reglas sin imprimir los 600 comentarios."""
+    total = len(resultados_reglas)
+    correctos = (resultados_reglas["evaluacion_reglas"] == "correcto").sum()
     revisar = total - correctos
+    exactitud = (correctos / total) * 100 if total else 0
 
-    conteo_etiquetas = Counter(fila["etiqueta_original"] for fila in resultados)
-    conteo_sentimientos = Counter(fila["sentimiento_calculado"] for fila in resultados)
+    print("\nLÍNEA BASE POR REGLAS")
+    print("-" * 60)
+    print(f"Clasificaciones correctas   : {correctos}")
+    print(f"Clasificaciones por revisar : {revisar}")
+    print(f"Exactitud aproximada        : {exactitud:.2f}%")
+    print("Distribución calculada por reglas:")
+    for etiqueta, cantidad in resultados_reglas["sentimiento_reglas"].value_counts().sort_index().items():
+        print(f"- {etiqueta}: {cantidad}")
 
-    print("\nRESUMEN DEL ANÁLISIS")
-    print("-" * 50)
-    print(f"Total de comentarios analizados: {total}")
-    print(f"Clasificaciones correctas      : {correctos}")
-    print(f"Clasificaciones por revisar    : {revisar}")
 
-    if total > 0:
-        exactitud = (correctos / total) * 100
-        print(f"Exactitud aproximada           : {exactitud:.2f}%")
+# -----------------------------------------------------------------------------
+# 7. Función principal
+# -----------------------------------------------------------------------------
 
-    print("\nDistribución de etiquetas originales:")
-    for etiqueta, conteo in conteo_etiquetas.items():
-        print(f"- {etiqueta}: {conteo}")
-
-    print("\nDistribución de sentimientos calculados:")
-    for sentimiento, conteo in conteo_sentimientos.items():
-        print(f"- {sentimiento}: {conteo}")
-
-# 3 Función principal para ejecutar el pipeline completo
 def main() -> None:
-    comentarios = cargar_comentarios(ARCHIVO_ENTRADA)
-    resultados = analizar_comentarios(comentarios)
-    imprimir_resultados(resultados)
-    imprimir_resumen(resultados)
-    guardar_resultados(resultados, ARCHIVO_SALIDA)
-    generar_archivos_representacion(resultados, CARPETA_SALIDA)
-    entrenar_y_evaluar_modelos(comentarios, CARPETA_SALIDA_MODELO)
-    print(f"\nResultados guardados en: {ARCHIVO_SALIDA.resolve()}")
+    """Ejecuta el pipeline completo del Corte II."""
+    print("PROYECTO INTEGRADOR DE PLN - CORTE II")
+    print("Análisis de sentimiento en reseñas de productos de tienda en línea")
+    print("=" * 80)
 
-# Ejecutar la función principal si este script se ejecuta directamente
+    nlp = cargar_modelo_spacy()
+    stopwords_es = cargar_stopwords_espanol(nlp)
+    print(f"Modelo spaCy cargado: {MODELO_SPACY}")
+    print(f"Stopwords combinadas: {len(stopwords_es)}")
+
+    datos = cargar_corpus(ARCHIVO_ENTRADA)
+    imprimir_resumen_corpus(datos)
+
+    datos_procesados = preprocesar_corpus(datos, nlp, stopwords_es)
+    print("\nProcesamiento con spaCy finalizado correctamente.")
+
+    resultados_reglas = generar_linea_base_reglas(datos_procesados)
+    guardar_linea_base_reglas(resultados_reglas, ARCHIVO_SALIDA_REGLAS)
+    imprimir_resumen_reglas(resultados_reglas)
+
+    generar_archivos_representacion(datos_procesados, CARPETA_SALIDA)
+    entrenar_y_evaluar_modelos(datos_procesados, CARPETA_SALIDA_MODELO)
+
+    print("\nPROCESO FINALIZADO")
+    print("-" * 60)
+    print(f"Resultados por reglas: {ARCHIVO_SALIDA_REGLAS.resolve()}")
+    print(f"Carpeta de representación: {CARPETA_SALIDA.resolve()}")
+    print(f"Carpeta de modelos: {CARPETA_SALIDA_MODELO.resolve()}")
+
+
 if __name__ == "__main__":
     main()
