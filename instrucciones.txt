@@ -1,0 +1,40 @@
+
+
+UPMH - Procesamiento de Lenguaje Natural
+Proyecto integrador - Análisis de sentimiento en reseñas de productos de tienda en línea
+Corte II
+
+Instrucciones para ejecutar el pipeline:
+
+1. Abrir Visual Studio Code en la carpeta del proyecto.
+
+2. Activar el entorno de trabajo:
+   conda activate pln311
+
+3. Instalar las dependencias si aún no están instaladas:
+   python -m pip install -r requirements.txt
+
+4. Descargar el modelo de spaCy en español si aún no está instalado:
+   python -m spacy download es_core_news_sm
+
+5. Ejecutar el pipeline principal:
+   python pipeline.py
+
+6. Revisar los archivos generados:
+   - resultados_analisis_sentimiento.csv
+   - carpeta salida
+   - carpeta salida_modelo
+
+Archivos principales esperados:
+
+- salida/01_preprocesamiento.csv
+- salida/02_matriz_bow.csv
+- salida/03_matriz_tf.csv
+- salida/04_matriz_tfidf.csv
+- salida/05_top_terminos_tfidf.csv
+- salida/06_similitud_documentos.csv
+- salida_modelo/01_datos_preprocesados_spacy.csv
+- salida_modelo/02_metricas_modelos.csv
+- salida_modelo/05_matriz_confusion_mejor_modelo.csv
+- salida_modelo/06_predicciones_prueba.csv
+- salida_modelo/08_errores_modelo.csv
