@@ -1,5 +1,5 @@
 ﻿,predicho_mixto,predicho_negativo,predicho_neutro,predicho_positivo
-real_mixto,29,3,5,8
-real_negativo,6,27,10,2
-real_neutro,2,0,40,3
-real_positivo,4,6,8,27
+real_mixto,75,0,0,0
+real_negativo,0,72,1,2
+real_neutro,0,0,70,5
+real_positivo,2,0,4,69

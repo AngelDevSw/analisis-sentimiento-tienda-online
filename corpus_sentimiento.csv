@@ -599,3 +599,403 @@ id,texto,etiqueta
 598,"El juego de mesa funciona bien, pero llegó golpeado.",mixto
 599,"El mouse está bonito, pero se siente frágil.",mixto
 600,"El short funciona, pero la batería dura poco.",mixto
+601,"Pensé que por el precio iba a estar regular, sin embargo los audífonos me sorprendieron para bien.",positivo
+602,"No recomiendo la cafetera; desde el primer día empezó a fallar.",negativo
+603,"La plancha llegó en una caja color café y contiene los accesorios mostrados.",neutro
+604,"Cumple, pero pudo estar mejor.",mixto
+605,"No tengo quejas sobre la licuadora; todo llegó completo y funciona como debe.",positivo
+606,"La neta salió malo, no duró ni una semana.",negativo
+607,"Recibí la licuadora hoy; todavía no hago pruebas.",neutro
+608,"Me gustó el diseño, pero no la sensación del material.",mixto
+609,"Buena compra: práctico, funsional y sin detalles visibles.",positivo
+610,"Aunque se veía bien en las fotos, la bocina llegó con detalles y no funciona correctamente.",negativo
+611,"Aún no puedo decir si funciona bien o mal; apenas lo abrí.",neutro
+612,"No es malo, aunque por el precio esperaba algo mejor.",mixto
+613,"No esperaba mucho de la plancha, pero salió muy buena y hasta ahora no me ha fallado.",positivo
+614,"Muy mal.",negativo
+615,"Ya lo recibí.",neutro
+616,"Está práctico y fácil de usar; sin embargo, el cable incluido es muy corto.",mixto
+617,"Hasta ahorita todo bien con el cargador, ya lo usé varias veces y cero problemas.",positivo
+618,"No sirve.",negativo
+619,"El color coincide con el que aparece en las fotos.",neutro
+620,"La neta sí sirve, pero no me encantó la calidad del acabado.",mixto
+621,"Me encantó. No es perfecto, pero por lo que cuesta está excelente.",positivo
+622,"No hace lo que promete y además se siente de baja calidad.",negativo
+623,"El material es plástico y tiene acabado mate.",neutro
+624,"Está bueno, aunque tiene sus detalles.",mixto
+625,"La neta sí me gustó el perfume; se siente de buena calidad y cumple con lo que promete.",positivo
+626,"El paquete llegó tarde y la cámara venía golpeada.",negativo
+627,"El envío fue entregado por la tarde.",neutro
+628,"El reloj funciona bien, pero el envío llegó tarde y la caja venía maltratada.",mixto
+629,"Aunque el envío tardó un poco, la cafetera llegó en buenas condiciones y funciona perfecto.",positivo
+630,"Pensé que sería aceptable por el precio, pero fue una mala compra.",negativo
+631,"Lo compré para uso doméstico.",neutro
+632,"Me gustó la mochila, aunque el material se siente más barato de lo que esperaba.",mixto
+633,"No me arrepiento de la compra, ha funcionado mejor de lo que esperaba.",positivo
+634,"No me gustó nada; se siente frágil y falla seguido.",negativo
+635,"Tiene un botón frontal y dos indicadores laterales.",neutro
+636,"La bocina está bonita y funciona, sin embargo llegó con un pequeño golpe.",mixto
+637,"Llegó bien empacado, sin golpes y funcionando desde el primer momento.",positivo
+638,"El celular funcionó una vez y después ya no quiso prender.",negativo
+639,"El tamaño es mediano, similar al de la descripción.",neutro
+640,"Me gustó mucho, pero la batería dura menos de lo anunciado.",mixto
+641,"Sí recomiendo la compra; para uso diario me ha resultado bastante buena.",positivo
+642,"No volvería a comprarlo, mejor gasten un poco más en otra opción.",negativo
+643,"No tengo una opinión todavía, solo confirmo que ya recibí el producto.",neutro
+644,"No está mal, pero tampoco diría que es excelente.",mixto
+645,"No pensé decirlo, pero sí valió la pena comprar el teclado.",positivo
+646,"Aunque intenté usarlo varias veces, nunca funcionó bien.",negativo
+647,"Viene sin baterías incluidas.",neutro
+648,"La calidad es buena; aun así, el pedido fue demasiado lento.",mixto
+649,"La entrega estuvo rápida y la sudadera llegó tal cual se anunciaba.",positivo
+650,"Decepcionante: mala calidad, mal acabado y cero confianza.",negativo
+651,"La publicación indica una garantía y el paquete incluye una hoja con instrucciones.",neutro
+652,"Sí hace su función, aunque a veces se traba.",mixto
+653,"Los audífonos se ven mejor en persona que en las fotos, muy recomendables.",positivo
+654,"El power bank llegó incompleto y no pude usarlo como debería.",negativo
+655,"Lo pedí en color negro y llegó en color negro.",neutro
+656,"Me gustó el diseño, pero no la sensación del material.",mixto
+657,"Lo probé varios días antes de opinar y el mouse sigue funcionando sin problema.",positivo
+658,"No era lo que anunciaban; en persona se ve mucho más barato.",negativo
+659,"Pesa poco y cabe en una mochila estándar.",neutro
+660,"Llegó rápido y bien empacado, pero venía un accesorio faltante.",mixto
+661,"El precio me parecía sospechosamente bajo, pero la compra salió buena.",positivo
+662,"Se supone que era nuevo, pero parecía usado.",negativo
+663,"La entrega se realizó en la fecha indicada.",neutro
+664,"Funciona mejor de lo que esperaba, aunque el manual viene muy confuso.",mixto
+665,"Por fin algo que sí cumple lo que dice la publicación.",positivo
+666,"Se calentó demasiado y preferí dejar de usarlo.",negativo
+667,"El paquete llegó cerrado; falta probar el producto.",neutro
+668,"El precio es bueno, sin embargo tiene algunos detalles de fabricación.",mixto
+669,"La neta sí me gustó la mochila; se siente de buena calidad y cumple con lo que promete.",positivo
+670,"Nada que ver con la descripción, no lo recomiendo.",negativo
+671,"No sé si recomendarlo todavía porque apenas lo estoy configurando.",neutro
+672,"No me arrepiento de comprarlo, pero sí esperaba un poco más de calidad.",mixto
+673,"Aunque tenía mis dudas por algunas reseñas, el reloj me salió excelente.",positivo
+674,"El empaque estaba bien, pero por dentro venía dañado.",negativo
+675,"Cuenta con las piezas que se muestran en la imagen.",neutro
+676,"Sirve para lo básico, aunque no se siente muy resistente.",mixto
+677,"Muy bueno.",positivo
+678,"Me arrepentí de comprarlo; no cumplió ni con lo básico.",negativo
+679,"La caja presenta información del modelo y número de serie.",neutro
+680,"La compra estuvo bien en general, pero el color no coincide totalmente con la foto.",mixto
+681,"No es de lujo, pero sí cumple y me dejó satisfecho.",positivo
+682,"No, definitivamente no vale lo que cuesta.",negativo
+683,"Llegó junto con un cable y una guía rápida.",neutro
+684,"Funciona y se ve bien, pero hace más ruido de lo que pensé.",mixto
+685,"Me gustó mucho la bocina; es fácil de usar, útil y tiene buen acabado.",positivo
+686,"La calidad es muy mala y el material se siente corriente.",negativo
+687,"Hasta ahora solo puedo confirmar que la presentación coincide con la publicación.",neutro
+688,"Llegó completo y a tiempo, aunque una pieza venía ligeramente rayada.",mixto
+689,"La cámara llegó antes de la fecha y venía muy bien protegida.",positivo
+690,"Apenas lo saqué de la caja y ya tenía una pieza floja.",negativo
+691,"La memoria USB llegó en una caja color café y contiene los accesorios mostrados.",neutro
+692,"Me encantó al principio, pero después de varios días empezó a presentar fallas pequeñas.",mixto
+693,"Buena compra: práctico, funcional y sin detalles visibles.",positivo
+694,"Funciona a ratos; para mí eso ya es una falla importante.",negativo
+695,"Recibí el mouse hoy; todavía no hago pruebas.",neutro
+696,"No es malo, aunque por el precio esperaba algo mejor.",mixto
+697,"10/10, sí lo volvería a comprar.",positivo
+698,"No cumplió mis expectativas y el soporte tampoco resolvió el problema.",negativo
+699,"Las medidas son aproximadamente las indicadas en la publicación.",neutro
+700,"Tiene buen desempeño, pero el empaque dejó mucho que desear.",mixto
+701,"No esperaba mucho del cable, pero salió muy bueno y hasta ahora no me ha fallado.",positivo
+702,"No recomiendo el termo; desde el primer día empezó a fallar.",negativo
+703,"La caja incluye el producto, un manual y los accesorios correspondientes.",neutro
+704,"Está práctico y fácil de usar; sin embargo, el cable incluido es muy corto.",mixto
+705,"La neta sí me gustó la funda; se siente de buena calidad y cumple con lo que promete.",positivo
+706,"La neta salió malo, no duró ni una semana.",negativo
+707,"Llegó.",neutro
+708,"Cumplió con la función principal, pero la calidad de algunos materiales es regular.",mixto
+709,"Hasta ahorita todo bien con la memoria USB, ya la usé varias veces y cero problemas.",positivo
+710,"Aunque se veía bien en las fotos, el teclado llegó con detalles y no funciona correctamente.",negativo
+711,"Ya lo recibí.",neutro
+712,"Sí lo usaría otra vez, aunque no sé si pagaría el mismo precio.",mixto
+713,"No tengo quejas sobre los tenis; todo llegó completo y funciona como debe.",positivo
+714,"Muy mal!!",negativo
+715,"El color coincide con el que aparece en las fotos.",neutro
+716,"El cargador funciona bien, pero la entrega llegó tarde y la caja venía maltratada.",mixto
+717,"Pensé que por el precio iba a estar regular, sin embargo el ventilador me sorprendió para bien.",positivo
+718,"No sirve.",negativo
+719,"El material es plástico y tiene acabado mate.",neutro
+720,"Me gustó el perfume, aunque el material se siente más barato de lo que esperaba.",mixto
+721,"No se siente barato; al contrario, está bastante bien hecho.",positivo
+722,"No hace lo que promete y además se siente de baja calidad.",negativo
+723,"El pedido fue entregado por la tarde.",neutro
+724,"La neta sí sirve, pero no me encantó la calidad del acabado.",mixto
+725,"Aunque la entrega tardó un poco, el termo llegó en buenas condiciones y funciona perfecto.",positivo
+726,"La entrega llegó tarde y la plancha venía golpeada.",negativo
+727,"Lo compré para uso doméstico.",neutro
+728,"La funda está bonita y funciona, sin embargo llegó con un pequeño golpe.",mixto
+729,"Me encantó. No es perfecto, pero por lo que cuesta está exelente.",positivo
+730,"Pensé que sería aceptable por el precio, pero fue una mala compra.",negativo
+731,"Tiene un botón frontal y dos indicadores laterales.",neutro
+732,"Cumple, pero pudo estar mejor.",mixto
+733,"Sí recomiendo la compra; para uso diario me ha resultado bastante buena.",positivo
+734,"No me gustó nada; se siente frágil y falla seguido.",negativo
+735,"Aún no puedo decir si funciona bien o mal; apenas lo abrí.",neutro
+736,"Está bueno, aunque tiene sus detalles.",mixto
+737,"No me arrepiento de la compra, ha funcionado mejor de lo que esperaba.",positivo
+738,"La bocina funcionó una vez y después ya no quiso prender.",negativo
+739,"El tamaño es mediano, similar al de la descripción.",neutro
+740,"Me gustó mucho, pero la batería dura menos de lo anunciado.",mixto
+741,"La entrega estuvo rapida y el juguete llegó tal cual se anunciaba.",positivo
+742,"No volvería a comprarlo, mejor gasten un poco más en otra opción.",negativo
+743,"No tengo una opinión todavía, solo confirmo que ya recibí el producto.",neutro
+744,"No está mal, pero tampoco diría que es excelente.",mixto
+745,"No pensé decirlo, pero sí valió la pena comprar la rasuradora.",positivo
+746,"Aunque intenté usarlo varias veces, nunca funcionó bien.",negativo
+747,"Viene sin baterías incluidas.",neutro
+748,"La calidad es buena; aun así, el envío fue demasiado lento.",mixto
+749,"La plancha se ve mejor en persona que en las fotos, muy recomendable.",positivo
+750,"Decepcionante: mala calidad, mal acabado y cero confianza.",negativo
+751,"La publicación indica una garantía y el paquete incluye una hoja con instrucciones.",neutro
+752,"Sí hace su función, aunque a veces se traba.",mixto
+753,"Lo compré para un familiar y quedó encantado; la almohada cumple muy bien.",positivo
+754,"La freidora llegó incompleta y no pude usarla como debería.",negativo
+755,"Lo pedí en color negro y llegó en color negro.",neutro
+756,"Me gustó el diseño, pero no la sensación del material.",mixto
+757,"Aunque tenía mis dudas por algunas reseñas, la crema me salió excelente.",positivo
+758,"No era lo que anunciaban; en persona se ve mucho más barato.",negativo
+759,"Pesa poco y cabe en una mochila estándar.",neutro
+760,"Llegó rápido y bien empacado, pero venía un accesorio faltante.",mixto
+761,"No es de lujo, pero sí cumple y me dejó satisfecho.",positivo
+762,"Se supone que era nuevo, pero parecía usado.",negativo
+763,"La entrega se realizó en la fecha indicada.",neutro
+764,"Funciona mejor de lo que esperaba, aunque el manual viene muy confuso.",mixto
+765,"Por fin algo que sí cumple lo que dice la publicación.",positivo
+766,"Se calentó demasiado y preferí dejar de usarlo.",negativo
+767,"El paquete llegó cerrado; falta probar el producto.",neutro
+768,"El precio es bueno, sin embargo tiene algunos detalles de fabricación.",mixto
+769,"Llegó bien empacado, sin golpes y funcionando desde el primer momento.",positivo
+770,"Nada que ver con la descripción, no lo recomiendo.",negativo
+771,"No sé si recomendarlo todavía porque apenas lo estoy configurando.",neutro
+772,"No me arrepiento de comprarlo, pero sí esperaba un poco más de calidad.",mixto
+773,"La neta sí me gustó el power bank; se siente de buena calidad y cumple con lo que promete.",positivo
+774,"El empaque estaba bien, pero por dentro venía dañado.",negativo
+775,"Cuenta con las piezas que se muestran en la imagen.",neutro
+776,"Sirve para lo básico, aunque no se siente muy resistente.",mixto
+777,"El precio me parecía sospechosamente bajo, pero la compra salió buena.",positivo
+778,"Me arrepentí de comprarlo; no cumplió ni con lo básico.",negativo
+779,"La caja presenta información del modelo y número de serie.",neutro
+780,"La compra estuvo bien en general, pero el color no coincide totalmente con la foto.",mixto
+781,"Me gustó mucho la freidora; es fácil de usar, útil y tiene buen acabado.",positivo
+782,"No, definitivamente no vale lo que cuesta.",negativo
+783,"Llegó junto con un cable y una guía rápida.",neutro
+784,"Funciona y se ve bien, pero hace más ruido de lo que pensé.",mixto
+785,"No tengo quejas sobre la bocina; todo llegó completo y funciona como debe.",positivo
+786,"La calidad es muy mala y el material se siente corriente.",negativo
+787,"Hasta ahora solo puedo confirmar que la presentación coincide con la publicación.",neutro
+788,"Llegó completo y a tiempo, aunque una pieza venía ligeramente rayada.",mixto
+789,"Hasta ahorita todo bien con la cámara, ya la usé varias veces y cero problemas.",positivo
+790,"Apenas lo saqué de la caja y ya tenía una pieza floja.",negativo
+791,"La cámara llegó en una caja color café y contiene los accesorios mostrados.",neutro
+792,"Me encantó al principio, pero después de varios días empezó a presentar fallas pequeñas.",mixto
+793,"Pensé que por el precio iba a estar regular, sin embargo la mochila me sorprendió para bien.",positivo
+794,"Funciona a ratos; para mí eso ya es una falla importante.",negativo
+795,"Recibí el termo hoy; todavía no hago pruebas.",neutro
+796,"No es malo, aunque por el precio esperaba algo mejor.",mixto
+797,"Aunque el pedido tardó un poco, la licuadora llegó en buenas condiciones y funciona perfecto.",positivo
+798,"No cumplió mis expectativas y el soporte tampoco resolvió el problema.",negativo
+799,"Las medidas son aproximadamente las indicadas en la publicación.",neutro
+800,"Tiene buen desempeño, pero el empaque dejó mucho que desear.",mixto
+801,"Muy bueno!!",positivo
+802,"No recomiendo los audífonos; desde el primer día empezaron a fallar.",negativo
+803,"La caja incluye el producto, un manual y los accesorios correspondientes.",neutro
+804,"Está práctico y fácil de usar; sin embargo, el cable incluido es muy corto.",mixto
+805,"10/10, sí lo volvería a comprar.",positivo
+806,"La neta salió malo, no duró ni una semana.",negativo
+807,"Llegó.",neutro
+808,"Cumplió con la función principal, pero la calidad de algunos materiales es regular.",mixto
+809,"No esperaba mucho del reloj, pero salió muy bueno y hasta ahora no me ha fallado.",positivo
+810,"Aunque se veía bien en las fotos, el cargador llegó con detalles y no funciona correctamente.",negativo
+811,"Ya lo recibí.",neutro
+812,"Sí lo usaría otra vez, aunque no sé si pagaría el mismo precio.",mixto
+813,"La neta sí me gustó la sudadera; se siente de buena calidad y cumple con lo que promete.",positivo
+814,"Muy mal.",negativo
+815,"El color coincide con el que aparece en las fotos.",neutro
+816,"La cámara funciona bien, pero el paquete llegó tarde y la caja venía maltratada.",mixto
+817,"Buena compra: práctico, funcional y sin detalles visibles.",positivo
+818,"No sirve.",negativo
+819,"El material es plástico y tiene acabado mate.",neutro
+820,"Me gustó la playera, aunque el material se siente más barato de lo que esperaba.",mixto
+821,"No pensé decirlo, pero sí valió la pena comprar la cafetera.",positivo
+822,"No hace lo que promete y además se siente de baja calidad.",negativo
+823,"La entrega fue realizada por la tarde.",neutro
+824,"La neta sí sirve, pero no me encantó la calidad del acabado.",mixto
+825,"El teclado llegó antes de la fecha y venía muy bien protegido.",positivo
+826,"El envío llegó tarde y el ventilador venía golpeado.",negativo
+827,"Lo compré para uso doméstico.",neutro
+828,"El reloj está bonito y funciona, sin embargo llegó con un pequeño golpe.",mixto
+829,"No se siente barato; al contrario, está bastante bien hecho.",positivo
+830,"Pensé que sería aceptable por el precio, pero fue una mala compra.",negativo
+831,"Tiene un botón frontal y dos indicadores laterales.",neutro
+832,"Cumple, pero pudo estar mejor.",mixto
+833,"Lo probé varios días antes de opinar y el cargador sigue funcionando sin problema.",positivo
+834,"No me gustó nada; se siente frágil y falla seguido.",negativo
+835,"Aún no puedo decir si funciona bien o mal; apenas lo abrí.",neutro
+836,"Está bueno, aunque tiene sus detalles.",mixto
+837,"Me encantó. No es perfecto, pero por lo que cuesta está excelente.",positivo
+838,"El termo funcionó una vez y después ya no quiso prender.",negativo
+839,"El tamaño es mediano, similar al de la descripción.",neutro
+840,"Me gustó mucho, pero la batería dura menos de lo anunciado.",mixto
+841,"Aunque tenía mis dudas por algunas reseñas, el perfume me salió excelente.",positivo
+842,"No volvería a comprarlo, mejor gasten un poco más en otra opción.",negativo
+843,"No tengo una opinión todavía, solo confirmo que ya recibí el producto.",neutro
+844,"No está mal, pero tampoco diría que es excelente.",mixto
+845,"Sí recomiendo la compra; para uso diario me ha resultado bastante buena.",positivo
+846,"Aunque intenté usarlo varias veces, nunca funcionó bien.",negativo
+847,"Viene sin baterías incluidas.",neutro
+848,"La calidad es buena; aun así, la entrega fue demasiado lenta.",mixto
+849,"El precio me parecía sospechosamente bajo, pero la compra salió buena.",positivo
+850,"Decepcionante: mala calidad, mal acabado y cero confianza.",negativo
+851,"La publicación indica una garantía y el paquete incluye una hoja con instrucciones.",neutro
+852,"Sí hace su función, aunque a veces se traba.",mixto
+853,"La entrega estuvo rápida y la funda llegó tal cual se anunciaba.",positivo
+854,"La memoria USB llegó incompleta y no pude usarla como debería.",negativo
+855,"Lo pedí en color negro y llegó en color negro.",neutro
+856,"Me gustó el diseño, pero no la sensación del material.",mixto
+857,"Me gustó mucho el organizador; es fácil de usar, útil y tiene buen acabado.",positivo
+858,"No era lo que anunciaban; en persona se ve mucho más barato.",negativo
+859,"Pesa poco y cabe en una mochila estándar.",neutro
+860,"Llegó rápido y bien empacado, pero venía un accesorio faltante.",mixto
+861,"No me arrepiento de la compra, ha funcionado mejor de lo que esperaba.",positivo
+862,"Se supone que era nuevo, pero parecía usado.",negativo
+863,"La entrega se realizó en la fecha indicada.",neutro
+864,"Funciona mejor de lo que esperaba, aunque el manual viene muy confuso.",mixto
+865,"No tengo quejas sobre la lámpara; todo llegó completo y funciona como debe.",positivo
+866,"Se calentó demasiado y preferí dejar de usarlo.",negativo
+867,"El paquete llegó cerrado; falta probar el producto.",neutro
+868,"El precio es bueno, sin embargo tiene algunos detalles de fabricación.",mixto
+869,"Hasta ahorita todo bien con los audífonos, ya los usé varias veces y cero problemas.",positivo
+870,"Nada que ver con la descripción, no lo recomiendo.",negativo
+871,"No sé si recomendarlo todavía porque apenas lo estoy configurando.",neutro
+872,"No me arrepiento de comprarlo, pero sí esperaba un poco más de calidad.",mixto
+873,"Aunque el envío tardó un poco, el mouse llegó en buenas condiciones y funciona perfecto.",positivo
+874,"El empaque estaba bien, pero por dentro venía dañado.",negativo
+875,"Cuenta con las piezas que se muestran en la imagen.",neutro
+876,"Sirve para lo básico, aunque no se siente muy resistente.",mixto
+877,"Por fin algo que sí cumple lo que dice la publicación.",positivo
+878,"Me arrepentí de comprarlo; no cumplió ni con lo básico.",negativo
+879,"La caja presenta información del modelo y número de serie.",neutro
+880,"La compra estuvo bien en general, pero el color no coincide totalmente con la foto.",mixto
+881,"Llegó bien empacado, sin golpes y funcionando desde el primer momento.",positivo
+882,"No, definitivamente no vale lo que cuesta.",negativo
+883,"Llegó junto con un cable y una guía rápida.",neutro
+884,"Funciona y se ve bien, pero hace más ruido de lo que pensé.",mixto
+885,"No es de lujo, pero sí cumple y me dejó satisfecho.",positivo
+886,"La calidad es muy mala y el material se siente corriente.",negativo
+887,"Hasta ahora solo puedo confirmar que la presentación coincide con la publicación.",neutro
+888,"Llegó completo y a tiempo, aunque una pieza venía ligeramente rayada.",mixto
+889,"La neta sí me gustó la crema; se siente de buena calidad y cumple con lo que promete.",positivo
+890,"Apenas lo saqué de la caja y ya tenía una pieza floja.",negativo
+891,"El teclado llegó en una caja color café y contiene los accesorios mostrados.",neutro
+892,"Me encantó al principio, pero después de varios días empezó a presentar fallas pequeñas.",mixto
+893,"Pensé que por el precio iba a estar regular, sin embargo la cámara me sorprendió para bien.",positivo
+894,"Funciona a ratos; para mí eso ya es una falla importante.",negativo
+895,"Recibí la cámara hoy; todavía no hago pruebas.",neutro
+896,"No es malo, aunque por el precio esperaba algo mejor.",mixto
+897,"Muy bueno...",positivo
+898,"No cumplió mis expectativas y el soporte tampoco resolvió el problema.",negativo
+899,"Las medidas son aproximadamente las indicadas en la publicación.",neutro
+900,"Tiene buen desempeño, pero el empaque dejó mucho que desear.",mixto
+901,"Lo compré para un familiar y quedó encantado; el juguete cumple muy bien.",positivo
+902,"No recomiendo el cargador; desde el primer día empezó a fallar.",negativo
+903,"La caja incluye el producto, un manual y los accesorios correspondientes.",neutro
+904,"Está práctico y fácil de usar; sin embargo, el cable incluido es muy corto.",mixto
+905,"No esperaba mucho de la cafetera, pero salió muy buena y hasta ahora no me ha fallado.",positivo
+906,"La neta salió malo, no duró ni una semana.",negativo
+907,"Llegó.",neutro
+908,"Cumplió con la función principal, pero la calidad de algunos materiales es regular.",mixto
+909,"Buena compra: práctico, funcional y sin detalles visibles.",positivo
+910,"Aunque se veía bien en las fotos, el perfume llegó con detalles y no funciona correctamente.",negativo
+911,"Ya lo recibí.",neutro
+912,"Sí lo usaría otra vez, aunque no sé si pagaría el mismo precio.",mixto
+913,"No pensé decirlo, pero sí valió la pena comprar el termo.",positivo
+914,"Muy mal.",negativo
+915,"El color coincide con el que aparece en las fotos.",neutro
+916,"La licuadora funciona bien, pero la entrega llegó tarde y la caja venía maltratada.",mixto
+917,"La mochila se ve mejor en persona que en las fotos, muy recomendable.",positivo
+918,"No sirve.",negativo
+919,"El material es plástico y tiene acabado mate.",neutro
+920,"Me gustaron los tenis, aunque el material se siente más barato de lo que esperaba.",mixto
+921,"Aunque tenía mis dudas por algunas reseñas, la bocina me salió excelente.",positivo
+922,"No hace lo que promete y además se siente de baja calidad.",negativo
+923,"El paquete fue entregado por la tarde.",neutro
+924,"La neta sí sirve, pero no me encantó la calidad del acabado.",mixto
+925,"Lo probé varios días antes de opinar y el power bank sigue funcionando sin problema.",positivo
+926,"La entrega llegó tarde y la lámpara venía golpeada.",negativo
+927,"Lo compré para uso doméstico.",neutro
+928,"La cámara está bonita y funciona, sin embargo llegó con un pequeño golpe.",mixto
+929,"Me encantó. No es perfecto, pero por lo que cuesta está excelente.",positivo
+930,"Pensé que sería aceptable por el precio, pero fue una mala compra.",negativo
+931,"Tiene un botón frontal y dos indicadores laterales.",neutro
+932,"Cumple, pero pudo estar mejor.",mixto
+933,"Sí recomiendo la compra; para uso diario me ha resultado bastante buena.",positivo
+934,"No me gustó nada; se siente frágil y falla seguido.",negativo
+935,"Aún no puedo decir si funciona bien o mal; apenas lo abrí.",neutro
+936,"Está bueno, aunque tiene sus detalles.",mixto
+937,"No me arrepiento de la compra, ha funcionado mejor de lo que esperaba.",positivo
+938,"El ventilador funcionó una vez y después ya no quiso prender.",negativo
+939,"El tamaño es mediano, similar al de la descripción.",neutro
+940,"Me gustó mucho, pero la batería dura menos de lo anunciado.",mixto
+941,"Hasta ahorita todo bien con la lámpara, ya la usé varias veces y cero problemas.",positivo
+942,"No volvería a comprarlo, mejor gasten un poco más en otra opción.",negativo
+943,"No tengo una opinión todavía, solo confirmo que ya recibí el producto.",neutro
+944,"No está mal, pero tampoco diría que es excelente.",mixto
+945,"La entrega estuvo rápida y los tenis llegaron tal cual se anunciaban.",positivo
+946,"Aunque intenté usarlo varias veces, nunca funcionó bien.",negativo
+947,"Viene sin baterías incluidas.",neutro
+948,"La calidad es buena; aun así, el paquete fue demasiado lento.",mixto
+949,"No tengo quejas sobre el cable; todo llegó completo y funciona como debe.",positivo
+950,"Decepcionante: mala calidad, mal acabado y cero confianza.",negativo
+951,"La publicación indica una garantía y el paquete incluye una hoja con instrucciones.",neutro
+952,"Sí hace su función, aunque a veces se traba.",mixto
+953,"Pensé que por el precio iba a estar regular, sin embargo la plancha me sorprendió para bien.",positivo
+954,"La cafetera llegó incompleta y no pude usarla como debería.",negativo
+955,"Lo pedí en color negro y llegó en color negro.",neutro
+956,"Me gustó el diseño, pero no la sensación del material.",mixto
+957,"El precio me parecía sospechosamente bajo, pero la compra salió buena.",positivo
+958,"No era lo que anunciaban; en persona se ve mucho más barato.",negativo
+959,"Pesa poco y cabe en una mochila estándar.",neutro
+960,"Llegó rápido y bien empacado, pero venía un accesorio faltante.",mixto
+961,"No es de lujo, pero sí cumple y me dejó satisfecho.",positivo
+962,"Se supone que era nuevo, pero parecía usado.",negativo
+963,"La entrega se realizó en la fecha indicada.",neutro
+964,"Funciona mejor de lo que esperaba, aunque el manual viene muy confuso.",mixto
+965,"Por fin algo que sí cumple lo que dice la publicación.",positivo
+966,"Se calentó demasiado y preferí dejar de usarlo.",negativo
+967,"El paquete llegó cerrado; falta probar el producto.",neutro
+968,"El precio es bueno, sin embargo tiene algunos detalles de fabricación.",mixto
+969,"La neta sí me gustó la freidora; se siente de buena calidad y cumple con lo que promete.",positivo
+970,"Nada que ver con la descripción, no lo recomiendo.",negativo
+971,"No sé si recomendarlo todavía porque apenas lo estoy configurando.",neutro
+972,"No me arrepiento de comprarlo, pero sí esperaba un poco más de calidad.",mixto
+973,"Aunque el paquete tardó un poco, el ventilador llegó en buenas condiciones y funciona perfecto.",positivo
+974,"El empaque estaba bien, pero por dentro venía dañado.",negativo
+975,"Cuenta con las piezas que se muestran en la imagen.",neutro
+976,"Sirve para lo básico, aunque no se siente muy resistente.",mixto
+977,"Llegó bien empacado, sin golpes y funcionando desde el primer momento.",positivo
+978,"Me arrepentí de comprarlo; no cumplió ni con lo básico.",negativo
+979,"La caja presenta información del modelo y número de serie.",neutro
+980,"La compra estuvo bien en general, pero el color no coincide totalmente con la foto.",mixto
+981,"No pensé decirlo, pero sí valió la pena comprar la memoria USB.",positivo
+982,"No, definitivamente no vale lo que cuesta.",negativo
+983,"Llegó junto con un cable y una guía rápida.",neutro
+984,"Funciona y se ve bien, pero hace más ruido de lo que pensé.",mixto
+985,"10/10, sí lo volvería a comprar.",positivo
+986,"La calidad es muy mala y el material se siente corriente.",negativo
+987,"Hasta ahora solo puedo confirmar que la presentación coincide con la publicación.",neutro
+988,"Llegó completo y a tiempo, aunque una pieza venía ligeramente rayada.",mixto
+989,"Me gustó mucho el reloj; es fácil de usar, útil y tiene buen acabado.",positivo
+990,"Apenas lo saqué de la caja y ya tenía una pieza floja.",negativo
+991,"El reloj llegó en una caja color café y contiene los accesorios mostrados.",neutro
+992,"Me encantó al principio, pero después de varios días empezó a presentar fallas pequeñas.",mixto
+993,"Aunque tenía mis dudas por algunas reseñas, la rasuradora me salió excelente.",positivo
+994,"Funciona a ratos; para mí eso ya es una falla importante.",negativo
+995,"Recibí el power bank hoy; todavía no hago pruebas.",neutro
+996,"No es malo, aunque por el precio esperaba algo mejor.",mixto
+997,"Buena compra: práctico, funcional y sin detalles visibles.",positivo
+998,"No cumplió mis expectativas y el soporte tampoco resolvió el problema.",negativo
+999,"Las medidas son aproximadamente las indicadas en la publicación.",neutro
+1000,"Tiene buen desempeño, pero el empaque dejó mucho que desear.",mixto

@@ -1,7 +1,8 @@
 # Procesamiento de Lenguaje Natural - Proyecto integrador
 # Python 3.11 + Miniconda + Visual Studio Code
 # Proyecto: Análisis de sentimiento en reseñas de productos de tienda en línea
-# Corte II: corpus ampliado, preprocesamiento con spaCy, stopwords con NLTK y comparación de modelos
+# Corte III: corpus final de 1000 reseñas,
+# conservación de stopwords críticas y evaluación final de modelos
 # Autor: Angel Montoya, Manuel Miranda, Eduardo Taurino
 # Fecha: 2026-07-02
 
@@ -22,9 +23,14 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.metrics import f1_score, precision_score, recall_score
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import (
+    GridSearchCV,
+    StratifiedKFold,
+    train_test_split,
+)
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.svm import LinearSVC
+from sklearn.pipeline import Pipeline
 
 
 ARCHIVO_ENTRADA = Path("corpus_sentimiento.csv")
@@ -34,6 +40,15 @@ CARPETA_SALIDA_MODELO = Path("salida_modelo")
 MODELO_SPACY = "es_core_news_sm"
 ETIQUETAS_ESPERADAS = {"positivo", "negativo", "neutro", "mixto"}
 
+STOPWORDS_CRITICAS = {
+    "no",
+    "nunca",
+    "jamás",
+    "pero",
+    "aunque",
+    "sin",
+    "embargo",
+}
 
 PALABRAS_POSITIVAS = {
     "excelente", "perfecto", "perfecta", "bien", "bueno", "buena", "buen", "buenisimo",
@@ -68,9 +83,18 @@ PALABRAS_NEUTRAS = {
     "tiempo", "rango", "proceso", "categoria", "observacion", "comentario", "recibido",
 }
 
+PALABRAS_PROTEGIDAS = (
+    STOPWORDS_CRITICAS
+    | PALABRAS_POSITIVAS
+    | PALABRAS_NEGATIVAS
+    | PALABRAS_NEUTRAS
+)
+
 CONECTORES_MIXTOS = {
     "pero", "aunque", "sin embargo", "aun así", "aun asi", "no obstante", "por otro lado"
 }
+
+
 
 
 # -----------------------------------------------------------------------------
@@ -90,7 +114,10 @@ def cargar_modelo_spacy() -> spacy.language.Language:
 
 
 def cargar_stopwords_espanol(nlp: spacy.language.Language) -> set[str]:
-    """Carga stopwords en español desde NLTK y las combina con las de spaCy."""
+    """
+    Carga stopwords en español desde NLTK y spaCy,
+    conservando palabras críticas para el análisis de sentimiento.
+    """
     try:
         stopwords_nltk = set(stopwords.words("spanish"))
     except LookupError:
@@ -99,11 +126,14 @@ def cargar_stopwords_espanol(nlp: spacy.language.Language) -> set[str]:
 
     stopwords_spacy = set(nlp.Defaults.stop_words)
 
-    # Nota técnica:
-    # No se agregan como stopwords palabras del dominio como producto, pedido,
-    # paquete, compra o app, porque en comentarios cortos pueden aportar contexto.
-    # Ejemplos: "producto malo", "pedido tarde", "app falló", "paquete abierto".
-    return stopwords_nltk.union(stopwords_spacy)
+    # Combinar las stopwords de ambas librerías
+    stopwords_combinadas = stopwords_nltk.union(stopwords_spacy)
+
+    # Conservar términos importantes para sentimiento,
+    # negación y contraste.
+    stopwords_combinadas = stopwords_combinadas - PALABRAS_PROTEGIDAS
+
+    return stopwords_combinadas
 
 
 def cargar_corpus(ruta: Path) -> pd.DataFrame:
@@ -157,19 +187,54 @@ def procesar_texto_spacy(texto: str, nlp: spacy.language.Language, stopwords_es:
 
     for token in documento:
         lema = token.lemma_.lower().strip()
+        texto_token = token.text.lower().strip()
 
         if token.is_space or token.is_punct:
             continue
+
         if token.like_num:
             continue
-        if token.is_stop or lema in stopwords_es or token.text.lower() in stopwords_es:
+        # Eliminar stopwords, excepto palabras protegidas
+        if (
+            texto_token not in PALABRAS_PROTEGIDAS
+            and lema not in PALABRAS_PROTEGIDAS
+            and (
+                token.is_stop
+                or lema in stopwords_es
+                or texto_token in stopwords_es
+            )
+        ):
             continue
-        if len(lema) <= 2:
+        # Eliminar palabras demaciadas cortas
+        # Excepto aquellas que sean sumamente relevantes. 
+        if len(lema) <= 2 and texto_token not in PALABRAS_PROTEGIDAS:
             continue
+
         if not re.match(r"^[a-záéíóúüñ]+$", lema):
             continue
 
         tokens_utiles.append(lema)
+
+
+    # Respaldo: Evitar que una reseña quede completamente vacía
+    if not tokens_utiles:
+        for token in documento:
+            if token.is_space or token.is_punct:
+                continue
+            texto_token = token.text.lower().strip()
+            lema = token.lemma_.lower().strip()
+            # Conservar números si el comentario está formado
+            # principalmente por una valoración como 10/10.
+            if token.like_num:
+                tokens_utiles.append(f"num_{texto_token}")
+                continue
+            # En el respaldo conservamos palabras con contenido
+            # aunque originalmente fueran consideradas stopwords.
+            if (
+                len(lema) > 2
+                and re.match(r"^[a-záéíóúüñ]+$", lema)
+            ):
+                tokens_utiles.append(lema)
 
     return " ".join(tokens_utiles), tokens_utiles
 
@@ -542,8 +607,8 @@ def imprimir_resumen_reglas(resultados_reglas: pd.DataFrame) -> None:
 # -----------------------------------------------------------------------------
 
 def main() -> None:
-    """Ejecuta el pipeline completo del Corte II."""
-    print("PROYECTO INTEGRADOR DE PLN - CORTE II")
+    #Ejecuta el pipeline completo del Corte III
+    print("PROYECTO INTEGRADOR DE PLN - CORTE III")
     print("Análisis de sentimiento en reseñas de productos de tienda en línea")
     print("=" * 80)
 

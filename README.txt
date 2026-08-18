@@ -31,11 +31,11 @@ Estructura del archivo:
 
 Distribución del corpus:
 
-- positivo: 150 comentarios
-- negativo: 150 comentarios
-- neutro: 150 comentarios
-- mixto: 150 comentarios
-- total: 600 comentarios
+- positivo: 250 comentarios
+- negativo: 250 comentarios
+- neutro: 250 comentarios
+- mixto: 250 comentarios
+- total: 1000 comentarios
 
 ## Archivo principal
 
@@ -118,7 +118,6 @@ El mejor modelo se selecciona usando la métrica F1 macro.
 ## Autores
 
 - Miguel Ángel Montoya Cerro
-- Manuel Miranda Astorga
 - Eduardo Taurino Martínez Morales
 
 ## Repositorio
