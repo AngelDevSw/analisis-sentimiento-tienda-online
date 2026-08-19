@@ -3,8 +3,8 @@
 # Proyecto: Análisis de sentimiento en reseñas de productos de tienda en línea
 # Corte III: corpus final de 1000 reseñas,
 # conservación de stopwords críticas y evaluación final de modelos
-# Autor: Angel Montoya, Manuel Miranda, Eduardo Taurino
-# Fecha: 2026-07-02
+# Autor: Angel Montoya, Eduardo Taurino
+# Fecha: 19 de agosto del 2026
 
 from __future__ import annotations
 
